@@ -1,0 +1,527 @@
+/* ====================================
+   📞 CONTACT HERO SECTION
+==================================== */
+.contact-hero {
+  position: relative;
+  height: 100vh;
+  min-height: 550px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+
+.contact-content {
+    padding-left: 50px;
+}
+
+/* Background Image */
+.contact-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* Overlay: dark blue + subtle black effect */
+.contact-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 49, 87, 0.8) 50%,       /* main navy tone */
+    rgba(0, 49, 87, 0.6) 100%       /* right slightly lighter */
+  );
+  z-index: 2;
+}
+
+/* Content Section */
+.contact-content {
+  position: relative;
+  z-index: 3;
+  color: #ffffff;
+}
+
+/* Breadcrumb */
+.breadcrumb5 {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+}
+
+/* Heading */
+.contact-heading {
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  width: 800px;
+}
+
+.contact-heading span {
+  position: relative;
+  background: linear-gradient(
+    276.27deg,
+    #ffffff 19.15%,
+    rgba(255, 255, 255, 0.3) 160.75%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  display: inline-block;
+  font-size: 128px;
+}
+
+/* Description */
+.contact-desc {
+  font-size: 20px;
+  line-height: 1.3;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 400px;
+  margin-top: 10px;
+  margin-left: 50px;
+}
+
+/* ====================================
+   📱 RESPONSIVE DESIGN
+==================================== */
+@media (max-width: 1200px) {
+  .contact-heading {
+    font-size: 48px;
+  }
+
+  .contact-desc {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-hero {
+    height: auto;
+    padding: 120px 30px 80px;
+    text-align: center;
+  }
+
+  .contact-heading {
+    font-size: 42px;
+  }
+
+  .contact-desc {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-heading {
+    font-size: 34px;
+  }
+}
+
+
+
+
+/* ====================================
+   📩 CUSTOMER ENQUIRY FORM SECTION
+==================================== */
+.contact-form-section {
+  background: #fff;
+  padding: 100px 150px;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+/* Tabs */
+.enquiry-tabs {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start; /* ✅ Align left */
+}
+
+.enquiry-tab {
+  background: transparent;
+  border: 1px solid rgba(0, 49, 87, 0.2);
+  color: rgba(0, 49, 87, 0.8);
+  border-radius: 20px;
+  padding: 6px 18px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.enquiry-tab.active {
+  background: rgba(0, 49, 87, 1);
+  color: #fff;
+  border-color: rgba(0, 49, 87, 1);
+}
+
+/* Header */
+.enquiry-header {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: left; /* ✅ Ensure left-aligned text */
+}
+
+.enquiry-title {
+  font-size: 42px;
+  color: rgba(0, 49, 87, 1);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.enquiry-title span {
+  background: linear-gradient(96.27deg, #003157 8.25%, rgba(0, 49, 87, 0.5) 80.85%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+.enquiry-desc {
+  color: rgba(22, 44, 71, 0.8);
+  max-width: 600px;
+  line-height: 1.7;
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+/* Form */
+.enquiry-form {
+  text-align: left; /* ✅ Left align form content */
+  max-width: 600px; /* ✅ Keep consistent width on left */
+}
+
+.enquiry-form label {
+  display: block;
+  font-size: 0.9rem;
+  color: rgba(22, 44, 71, 0.8);
+  margin-bottom: 6px;
+}
+
+.enquiry-form input,
+.enquiry-form select,
+.enquiry-form textarea {
+  width: 100%;
+  border: 1px solid rgba(0, 49, 87, 0.25);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  color: rgba(22, 44, 71, 0.9);
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.enquiry-form input:focus,
+.enquiry-form select:focus,
+.enquiry-form textarea:focus {
+  border-color: rgba(0, 49, 87, 0.6);
+}
+
+.enquiry-form textarea {
+  min-height: 100px;
+  resize: none;
+}
+
+/* Footer */
+.form-footer {
+  margin-top: 25px;
+}
+
+/* Fix checkbox alignment and spacing */
+.checkbox-area {
+  display: flex;
+  align-items: center; /* ✅ vertically align checkbox with text */
+  gap: 6px; /* ✅ reduce spacing */
+  justify-content: flex-start; /* ✅ left align */
+  font-size: 0.85rem;
+  color: rgba(22, 44, 71, 0.8);
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.checkbox-area input[type="checkbox"] {
+  margin-top: 0;
+  accent-color: rgba(0, 49, 87, 1); /* ✅ dark blue tick */
+  width: 16px;
+  height: 16px;
+}
+
+.checkbox-area label {
+  display: inline-block;
+  margin: 0;
+  cursor: pointer;
+}
+
+
+.checkbox-area a {
+  color: rgba(0, 49, 87, 1);
+  text-decoration: underline;
+}
+
+.submit-btn {
+  background: rgba(0, 49, 87, 1);
+  color: #fff;
+  border-radius: 25px;
+  padding: 10px 28px;
+  font-weight: 500;
+  border: none;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #00284a;
+}
+
+.contact-form-section {
+  position: relative;
+}
+
+.lets-talk {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%) rotate(-90deg);
+  font-size: 140px;
+  font-weight: 700;
+  color: rgba(22, 44, 71, 0.05);
+  white-space: nowrap;
+}
+
+
+/* ✨ FORM ANIMATION EFFECTS */
+.form-container {
+  position: relative;
+  min-height: 450px;
+}
+
+.fade-form {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+  visibility: hidden;
+}
+
+.fade-form.show {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+  z-index: 2;
+}
+
+.fade-form.hide {
+  opacity: 0;
+  transform: translateY(20px);
+  visibility: hidden;
+  z-index: 1;
+}
+
+/* ====================================
+   📱 RESPONSIVE
+==================================== */
+@media (max-width: 1200px) {
+  .contact-form-section {
+    padding: 80px 60px;
+  }
+
+  .lets-talk {
+    font-size: 100px;
+    right: -10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-form-section {
+    padding: 60px 30px;
+  }
+
+  .lets-talk {
+    display: none;
+  }
+}
+
+
+
+/* ====================================
+   🌍 GLOBAL HEADQUARTERS SECTION
+==================================== */
+.contact-map-section {
+  background: #f9fafc;
+  padding: 100px 150px;
+  font-family: "Poppins", sans-serif;
+  color: #162c47;
+}
+
+.map-header {
+  margin-bottom: 50px;
+}
+
+.map-subtitle {
+  color: rgba(22, 44, 71, 0.4);
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+.map-title {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: rgba(0, 49, 87, 1);
+}
+
+.map-title span {
+  background: linear-gradient(96.27deg, #003157 8.25%, rgba(0, 49, 87, 0.5) 80.85%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+/* ====================================
+   🗺️ MAP & DETAILS LAYOUT
+==================================== */
+.map-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 80px;
+}
+
+/* Left: Map */
+.map-left {
+  flex: 0 0 55%;
+}
+
+.map-image {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Right: Details */
+.map-right {
+  flex: 0 0 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.map-details {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 25px 0;
+}
+
+.map-details li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  color: rgba(22, 44, 71, 0.9);
+  line-height: 1.6;
+}
+
+/* PNG ICON STYLE (Replaces React Icons) */
+.map-png-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.map-link {
+  color: rgba(0, 49, 87, 1);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.map-link:hover {
+  text-decoration: underline;
+  color: #00284a;
+}
+
+.map-desc {
+  color: rgba(22, 44, 71, 0.75);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  max-width: 420px;
+  margin-top: 10px;
+}
+
+/* ====================================
+   📏 OPTIONAL DIVIDER
+==================================== */
+.map-content::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 60%;
+  width: 1px;
+  background: rgba(0, 49, 87, 0.1);
+  left: 54%;
+  top: 20%;
+}
+
+/* ====================================
+   📱 RESPONSIVE DESIGN
+==================================== */
+@media (max-width: 1200px) {
+  .contact-map-section {
+    padding: 80px 60px;
+  }
+
+  .map-title {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .map-content {
+    flex-direction: column;
+    gap: 40px;
+    align-items: flex-start;
+    position: static;
+  }
+
+  .map-content::after {
+    display: none;
+  }
+
+  .map-left,
+  .map-right {
+    flex: 1 1 100%;
+  }
+
+  .map-title {
+    font-size: 36px;
+  }
+
+  .map-right {
+    text-align: left;
+  }
+
+  .map-desc {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-map-section {
+    padding: 60px 25px;
+  }
+
+  .map-title {
+    font-size: 32px;
+  }
+}

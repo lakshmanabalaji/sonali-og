@@ -1,0 +1,24 @@
+#lights {
+  /* Position the Hyperspeed canvas inside a container (e.g. .home-container).
+     Using absolute so it only fills the selected area where the element is placed. */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0; /* sit beneath overlay content which will use z-index:2 */
+  background: transparent; /* ensure canvas background shows Three renderer colors */
+  /* allow the `#lights` container to receive pointer events so App can listen for mouse/touch
+     while keeping the actual canvas non-interactive (canvas has pointer-events:none). This
+     keeps overlay elements (z-index:2) above the effect and still interactive. */
+  pointer-events: auto;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: none;
+  background: transparent; /* ensure no CSS background covers the renderer */
+}

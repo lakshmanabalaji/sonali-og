@@ -1,0 +1,804 @@
+/* ==========================
+   Innovation Hero Section
+========================== */
+
+.innovation-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 160px 80px 60px 80px;
+  min-height: 750px;
+  color: #ffffff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background: radial-gradient(
+    77.69% 246.65% at 90.84% 24.54%,
+    #272b36 0%,
+    #2e4562 100%
+  );
+}
+
+/* Subtle texture overlay */
+.innovation-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.05);
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8Xw8AAtIBxPnc4RwAAAAASUVORK5CYII=");
+  background-repeat: repeat;
+  opacity: 0.15;
+  mix-blend-mode: overlay;
+  z-index: 0;
+}
+
+/* Left Side Content */
+.inno-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 60%;
+  flex: 1;
+  margin-left: 67px;
+}
+
+.breadcrumb2 {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+}
+
+.innovation-heading {
+  font-size: 48px;
+  font-weight: 600;
+  margin: 0;
+  line-height: 0.6;
+}
+
+.innovation-heading span {
+  background: linear-gradient(
+    276.27deg,
+    #ffffff 19.15%,
+    rgba(255, 255, 255, 0.3) 91.75%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: contrast(105%);
+  font-weight: 700;
+}
+
+.quality-heading {
+  font-size: 230px;
+  font-weight: 700;
+  line-height: 0.9;
+  background: linear-gradient(
+    276.27deg,
+    #ffffff 19.15%,
+    rgba(255, 255, 255, 0.3) 91.75%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: contrast(105%);
+}
+
+.at-sonali {
+  font-size: 64px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-top: 20px;
+}
+
+.hero-text {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 15px;
+  max-width: 480px;
+  line-height: 1.6;
+}
+
+/* ==========================
+   Wire Image (Desktop)
+========================== */
+
+.wire-image-container {
+  position: absolute;
+  top: 260px;
+  left: 420px;
+  width: 898px;
+  height: 557px;
+  z-index: 1;
+}
+
+.innovation-wire-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: brightness(1.05) contrast(1.1);
+  transform: scale(1.7);
+  transform-origin: center;
+}
+
+/* ==========================
+   Responsive - Tablet
+========================== */
+@media (max-width: 1200px) {
+  .innovation-hero {
+    flex-direction: column;
+    padding: 100px 40px 60px 40px;
+    text-align: center;
+  }
+
+  .inno-hero-content {
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  .wire-image-container {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .innovation-wire-image {
+    transform: scale(1.1);
+    width: 100%;
+    height: auto;
+  }
+
+  .quality-heading {
+    font-size: 160px;
+  }
+
+  .at-sonali {
+    font-size: 28px;
+  }
+
+  .team-circle-inno {
+    display: none !important;
+  }
+}
+
+/* ==========================
+   Responsive - Mobile (≤768px)
+========================== */
+@media (max-width: 768px) {
+  .innovation-hero {
+    padding: 80px 20px 50px 20px;
+  }
+
+  .inno-hero-content {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .quality-heading {
+    font-size: 100px;
+  }
+
+  .innovation-heading {
+    font-size: 36px;
+  }
+
+  .innovation-heading span{
+    font-size: 36px;
+  }
+
+  .at-sonali {
+    font-size: 24px;
+  }
+
+  .hero-text {
+    font-size: 1rem;
+    margin: 0 auto;
+  }
+
+  .wire-image-container {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .innovation-wire-image {
+    transform: none;
+    width: 100%;
+    height: auto;
+  }
+
+  .team-circle-inno {
+    display: none !important;
+  }
+}
+
+/* ==========================
+   Responsive - Small Mobile (≤576px)
+========================== */
+@media (max-width: 576px) {
+  .innovation-hero {
+    padding: 70px 15px 70px 15px !important;
+    min-height: auto !important; /* REMOVE EMPTY SPACE */
+  }
+
+  .inno-hero-content {
+    margin-left: 0 !important;
+    text-align: center;
+  }
+
+  .quality-heading {
+    font-size: 60px;
+  }
+
+  .innovation-heading {
+    font-size: 28px;
+  }
+
+  .at-sonali {
+    font-size: 20px;
+  }
+
+  .hero-text {
+    font-size: 0.9rem;
+  }
+
+  /* 🚫 REMOVE IMAGE COMPLETELY */
+  .wire-image-container {
+    display: none !important;
+  }
+
+  .team-circle-inno {
+    display: none !important;
+  }
+}
+
+
+/* ================================
+   Our Innovation Approach Section
+================================ */
+
+.innovation-approach-section {
+  background: #ffffff;
+  color: #162c47;
+  padding: 100px 150px;
+  font-family: "Poppins", sans-serif;
+}
+
+.inno-approach-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+/* Left Side Content */
+.approach-left {
+  flex: 1;
+  max-width: 750px;
+}
+
+.approach-subtitle {
+  font-size: 1rem;
+  color: rgba(22, 44, 71, 0.5);
+  margin-bottom: 15px;
+  letter-spacing: 0.3px;
+}
+
+.approach-heading {
+  font-size: 48px;
+  font-weight: 600;
+  color: rgba(0, 49, 87, 1);
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.approach-heading span {
+  background: linear-gradient(
+    96.27deg,
+    #003157 8.25%,
+    rgba(0, 49, 87, 0.5) 80.85%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  font-size: 70px;
+}
+
+.approach-desc {
+  font-size: 1.05rem;
+  color: rgba(22, 44, 71, 0.85);
+  margin-bottom: 50px;
+  line-height: 1.7;
+  max-width: 680px;
+}
+
+/* Icons Section */
+.approach-icons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.approach-icon-item {
+  width: 162px;
+  height: 122px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.appro-product-icons {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 12px;
+  object-fit: contain;
+}
+
+.approach-icon-item p {
+  font-size: 26px;
+  font-weight: 600;
+  color: #0f2342;
+  text-align: left;
+}
+
+.team-circle-inno {
+  position: relative;
+  width: 175px;
+  height: 175px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  cursor: pointer;
+}
+
+.circle-svg-inno {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-360deg);
+}
+
+/* center circle */
+.center-circle-inno {
+  width: 90px;
+  height: 90px;
+  background-color: #e8ebf2;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* arrow */
+.arrow-inno {
+  font-size: 32px;
+  color: #11224d;
+  line-height: 1;
+  transform: rotate(-145deg);
+}
+
+/* ================================
+   Responsive Styles
+================================ */
+@media (max-width: 992px) {
+  .inno-approach-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .approach-right {
+    align-self: center;
+  }
+
+  .approach-icons {
+    gap: 50px;
+  }
+
+  .approach-heading {
+    font-size: 38px;
+  }
+
+  .approach-desc {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .innovation-approach-section {
+    padding: 60px 20px;
+  }
+
+  .approach-heading {
+    font-size: 30px;
+  }
+
+  .approach-icons {
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .appro-product-icons {
+    width: 50px;
+    height: 50px;
+  }
+
+  .approach-icon-item p {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* ================================
+   Quality Assurance Section
+================================ */
+
+.quality-assurance-section {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(102.86deg, rgba(0, 49, 87, 0.03) 5.74%, rgba(0, 49, 87, 0.1) 133.83%);
+  padding: 100px 150px;
+  font-family: "Poppins", sans-serif;
+  gap: 90px;
+  box-sizing: border-box;
+}
+
+/* ================================
+   Left Side (Image + Shield)
+================================ */
+
+.qa-left {
+  flex: 0 1;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.qa-image-wrapper {
+  position: relative;
+  width: 380px;
+  height: auto;
+}
+
+.qa-main-image {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Shield positioned partially over the image */
+.qa-shield {
+  position: absolute;
+  right: -45px;
+  top: 40%;
+  width: 120px;
+  transform: translateY(-50%);
+}
+
+/* ================================
+   Right Side (Text + Icons)
+================================ */
+
+.qa-right {
+  flex: 1.2;
+  color: #162c47;
+}
+
+.qa-subtitle {
+  font-size: 1rem;
+  color: rgba(22, 44, 71, 0.5);
+  margin-bottom: 12px;
+  letter-spacing: 0.3px;
+}
+
+.qa-heading {
+  font-size: 46px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: rgba(0, 49, 87, 1);
+  line-height: 1.2;
+}
+
+.qa-heading span {
+  background: linear-gradient(
+    96.27deg,
+    #003157 8.25%,
+    rgba(0, 49, 87, 0.5) 80.85%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  font-size: 70px;
+}
+
+.qa-description {
+  font-size: 20px;
+  color: rgba(22, 44, 71, 0.85);
+  line-height: 1.2;
+  max-width: 600px;
+  margin-bottom: 50px;
+}
+
+/* Icons Row */
+.qa-icons {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.qa-icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.qa-icon {
+  width: 120px;    /* increased from 85px */
+  height: 85px;    /* increased from 60px */
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+
+/* ================================
+   Responsive Adjustments
+================================ */
+
+@media (max-width: 1200px) {
+  .quality-assurance-section {
+    flex-direction: column;
+    padding: 80px 40px;
+    text-align: center;
+    gap: 60px;
+  }
+
+  .qa-left {
+    justify-content: center;
+  }
+
+  .qa-image-wrapper {
+    width: 300px;
+  }
+
+  .qa-shield {
+    right: -35px;
+    top: 50%;
+    width: 75px;
+  }
+
+  .qa-heading {
+    font-size: 38px;
+  }
+
+  .qa-icons {
+    justify-content: center;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .quality-assurance-section {
+    padding: 60px 20px;
+  }
+
+  .qa-image-wrapper {
+    width: 260px;
+  }
+
+  .qa-shield {
+    right: -25px;
+    width: 60px;
+  }
+
+  .qa-heading {
+    font-size: 30px;
+  }
+
+  .qa-description {
+    font-size: 0.95rem;
+  }
+
+  .qa-icon {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+
+
+/* ================================
+   Sustainability Commitment Section
+================================ */
+
+.sustainability-section {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 100px 150px;
+  font-family: "Poppins", sans-serif;
+  gap: 3px;
+  box-sizing: border-box;
+}
+
+/* ================================
+   Left Side (Text)
+================================ */
+.sustain-left {
+  flex: 2.1;
+  color: #162c47;
+}
+
+.sustain-subtitle {
+  font-size: 1rem;
+  color: rgba(22, 44, 71, 0.5);
+  margin-bottom: 12px;
+  letter-spacing: 0.3px;
+}
+
+.sustain-heading {
+  font-size: 46px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: rgba(0, 49, 87, 1);
+  line-height: 1.3;
+}
+
+.sustain-heading span {
+  background: linear-gradient(
+    96.27deg,
+    #003157 8.25%,
+    rgba(0, 49, 87, 0.5) 80.85%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 70px;
+  font-weight: 700;
+}
+
+.sustain-description {
+  font-size: 1.05rem;
+  color: rgba(22, 44, 71, 0.85);
+  line-height: 1.7;
+  max-width: 600px;
+  margin-bottom: 40px;
+}
+
+/* ================================
+   Icon Row + Button
+================================ */
+.sustain-icon-row {
+  display: flex;
+  flex-direction: column; /* ⬅️ STACKS ICON ABOVE BUTTON */
+  align-items: flex-start; 
+  gap: 20px;
+}
+
+
+.sustain-icon-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sustain-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.sustain-icon-item p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0f2342;
+  margin: 0;
+}
+
+/* Button */
+.sustain-btn {
+  background: #162c47;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 12px 26px;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.3px;
+  transition: background 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.sustain-btn:hover {
+  background: #1e3354;
+  transform: translateY(-2px);
+}
+
+.sustain-btn .arrow {
+  margin-left: 8px;
+  font-size: 1.2rem;
+  color: #fff; 
+}
+
+/* ================================
+   Right Side (Image)
+================================ */
+.sustain-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.sustain-image {
+  width: 420px;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ================================
+   Responsive Adjustments
+================================ */
+@media (max-width: 1200px) {
+  .sustainability-section {
+    flex-direction: column-reverse;
+    padding: 80px 40px;
+    text-align: center;
+    gap: 50px;
+  }
+
+  .sustain-right {
+    justify-content: center;
+  }
+
+  .sustain-image {
+    width: 80%;
+    border-radius: 12px;
+  }
+
+  .sustain-heading {
+    font-size: 38px;
+  }
+
+  .sustain-icon-row {
+    justify-content: center;
+  }
+
+  .sustain-btn {
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .sustainability-section {
+    padding: 60px 20px;
+  }
+
+  .sustain-heading {
+    font-size: 30px;
+  }
+
+  .sustain-description {
+    font-size: 0.95rem;
+  }
+
+  .sustain-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .sustain-btn {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+}

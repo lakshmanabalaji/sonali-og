@@ -1,0 +1,921 @@
+/* Custom styles that Bootstrap doesn't provide */
+.vh-80 {
+  height: 80vh;
+}
+
+/* Transform animations for product cards */
+.transform-rotate-left {
+  transform: rotate(-5deg);
+  transition: transform 0.3s ease;
+}
+
+.transform-rotate-left:hover {
+  transform: rotate(0);
+}
+
+.transform-rotate-right {
+  transform: rotate(5deg);
+  transition: transform 0.3s ease;
+}
+
+.transform-rotate-right:hover {
+  transform: rotate(0);
+}
+
+/* Custom background for home container */
+.homeContainer {
+  /* Hero background: black with white text for high contrast */
+  background-image: none;
+  background-color: #000000; /* solid black */
+  min-height: 88vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 140px;
+  padding-right: 40px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  color: #ffffff; /* white text */
+  position: relative;
+  overflow: hidden; /* keep canvas visually contained inside the hero */
+}
+@media (max-width: 900px) {
+  .homeContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 20px;
+    min-height: 60vh;
+    background-position: right top;
+  }
+}
+@media (max-width: 600px) {
+  .homeContainer {
+    padding: 20px 10px;
+    min-height: 40vh;
+    background-size: cover;
+    background-position: center right;
+  }
+}
+
+.overlay h1 {
+  font-size: 64px; /* responsive: min 3rem, scales up to 5rem */
+  font-weight: 420;
+  margin-bottom: 10px;
+  line-height: 1;
+  /* font-family: "Sequel Sans", sans-serif; */
+}
+
+/* Ensure overlay content sits above the Hyperspeed canvas */
+.homeContainer .overlay {
+  position: relative;
+  z-index: 2;
+}
+
+/* Make sure interactive items (buttons, chat, links) are above the background canvas */
+.homeContainer .buttonGroup,
+.whatsapp-container,
+.chat-popup,
+.productBtn {
+  position: relative;
+  z-index: 2;
+}
+.overlay p {
+  font-size: 20px;
+  margin-top: 2px;
+  line-height: 1;
+}
+
+.overlay h3 {
+  font-size: clamp(2rem, 4vw, 3rem); /* responsive: min 2rem, scales up to 3rem */
+  margin-bottom: 5px;
+  margin-top: 5px;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.over {
+  display: block;
+  /* Wires size: responsive and large */
+  font-size: clamp(80px, 15vw, 250px);  
+  font-weight: 700;
+  margin-top: -20px; 
+  line-height: 0.9;
+  width: auto;  
+
+  /* Hard split: left blue gradient, right pure white (50% split) */
+  background: linear-gradient(
+    90deg,
+    #467ab9 0%,
+    #3469aa 20%,
+    #ffffff 45%,
+    #ffffff 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* for non-webkit browsers that might support it */
+}
+
+/* if you want a slight anti-alias smoothing on the white edge */
+h1 span::selection { background: transparent; color: inherit; }
+
+.buttonGroup {
+  display: flex;
+  gap: 20px;
+  margin-top: 25px;
+}
+
+/* Base button style */
+.btn {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* space between text and arrow */
+}
+
+/* Red button */
+.btn-red {
+  background-color: #e53935;
+}
+.btn-red:hover {
+  background-color: #c62828;
+}
+
+/* Blue button */
+.btn-blue {
+  background-color: #0056b3;
+}
+.btn-blue:hover {
+  background-color: #003f82;
+}
+
+/* Arrow style */
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .buttonGroup {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .btn {
+    width: auto;
+    justify-content: center;
+  }
+}
+
+/* small-screen tweak so the split visually stays near half */
+@media (max-width: 500px) {
+  h1 span {
+    /* you can nudge the split point for very small screens if needed */
+    background: linear-gradient(
+      90deg,
+      #1272d8 0%,
+      #5688d3 38%,
+      #5688d3 50%,
+      #ffffff 50%,
+      #ffffff 100%
+    );
+  }
+}
+
+/* Optional: responsive adjustment for smaller screens */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  h1 span {
+    font-size: 70px;
+  }
+}
+
+
+/* =============================
+   WhatsApp Floating Chat
+============================= */
+.whatsapp-container {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* Chatbox style */
+.chat-popup {
+  background: #ffffff;
+  color: #333;
+  width: 280px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  padding: 20px 18px 25px 18px;
+  margin-bottom: 12px;
+  position: relative;
+  animation: slideUp 0.3s ease;
+}
+
+/* Animation */
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Close (X) button */
+.close-btn {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Chat heading and text */
+.chat-popup h4 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 18px;
+  color: #162C47;
+}
+
+.chat-popup p {
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+
+/* Chat with us button */
+.chat-btn {
+  background-color: #25D366; /* WhatsApp green */
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  transition: background 0.3s ease;
+}
+
+.chat-btn:hover {
+  background-color: #1ebe5d;
+}
+
+/* WhatsApp Floating Icon */
+.whatsapp-icon {
+  background: #25D366;
+  border: none;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-icon img {
+  width: 28px;
+  height: 28px;
+}
+
+.whatsapp-icon:hover {
+  transform: scale(1.1);
+}
+
+
+/* =============================
+   About Section
+============================= */
+.aboutContainer1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  
+  padding: 100px 70px;
+  background-color: #f5f7fa;
+  color: #162C47;
+  gap: 10px;
+}
+
+.aboutLeft {
+  width: 55%;
+}
+
+.aboutLeft h2 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: grey;
+
+}
+
+.aboutLeft h3 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: rgba(22, 44, 71, 1);
+;
+}
+
+.aboutLeft h3 .highlightText {
+  background: linear-gradient(96.27deg, #162C47 8.25%, rgba(22, 44, 71, 0.5) 80.85%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 4rem;
+}
+
+.aboutLeft p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Who We Are section */
+.whoWeAre {
+  margin-top: 30px;
+  padding-left: 20px !important;
+  padding-top: 10px;
+  border-radius: 20px;
+  max-width: 250px !important;
+  max-height: 250px !important;
+  height: 250px !important;
+  /* ✨ Gradient background */
+  background: linear-gradient(
+    132.08deg,
+    #162C47 24.83%,
+    rgba(22, 44, 71, 0.6) 115.74%
+  );
+
+  /* Optional: add soft shadow & text color contrast */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  color: #ffffff;
+}
+
+.whoWeAre h3 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+/* Know More button */
+.knowMoreBtn {
+  color: #fff;
+  border: none;
+  padding: 50px 14px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  background: transparent;
+}
+
+.knowMoreBtn:hover {
+  transform: scale(1.05); /* slightly enlarge on hover */
+}
+
+
+/* Right column (Vision) */
+.aboutRight {
+  width: 50%;
+  margin-top: 100px;
+}
+
+.aboutRight h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #003057;
+}
+
+.aboutRight p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .aboutContainer1 {
+    flex-direction: column;
+    gap: 40px;
+    padding: 60px 30px;
+  }
+
+  .aboutLeft,
+  .aboutRight {
+    width: 100%;
+  }
+
+  .aboutRight {
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .whoWeAre {
+    max-width: 150px !important;
+    height: 150px !important;
+    padding-left: 10px !important;
+    padding-top: 8px;
+    margin-top: 20px;
+    border-radius: 15px;
+    margin-bottom: -40px;
+  }
+
+  .whoWeAre h3 {
+    font-size: 1.5rem;
+    line-height: 1.1;
+    padding: 6px 15px;
+  }
+
+  .whoWeAre .knowMoreBtn {
+    font-size: 0.85rem;
+    padding: 6px 15px;
+    margin-top: 35px;
+  }
+
+  .whoWeAre .arrow {
+    font-size: 1rem;
+  }
+}
+
+
+/* =============================
+   Our Applications Section
+============================= */
+.applicationsSection {
+  background-color: #0e2439;
+  color: #fff;
+  padding: 80px 70px;
+  text-align: left;
+}
+
+.appSubtitle {
+  font-size: 1rem;
+  color: grey;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.applicationsSection h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.applicationsSection h2 span {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* for non-webkit browsers */
+  font-weight: 800;
+}
+
+
+.applicationsGrid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0; /* no spacing between cards */
+  border-radius: 20px;
+  overflow: hidden; /* makes the corners smooth when joined */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* single outer border */
+  background: #0e2439;; /* faint shared background */
+}
+
+.appCard {
+  flex: 1;
+  min-width: 280px;
+  padding: 40px 30px;
+  /* background: rgba(255, 255, 255, 0.08); */
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+/* Remove right border for the last card */
+.appCard:last-child {
+  border-right: none;
+}
+
+.appCard:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-3px);
+}
+
+.appCard .icon {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.appCard p {
+  color: #cbd5e1;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.appCard h3 {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .applicationsSection {
+    padding: 60px 25px;
+  }
+  .applicationsGrid {
+    flex-direction: column;
+    border: none;
+    width: 100%;          /* Full container width */
+    max-width: 400px;     /* Limit max width for better focus */
+    margin: 0 auto;       /* Center horizontally */
+    padding: 0;      /* Add side padding */
+    box-sizing: border-box;
+    border-radius: 30px; /* maintain rounded corners */
+
+  }
+
+  .appCard {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    min-width: 100%;      /* Full width of container */
+    padding: 10px 0px;   /* Reduced padding for mobile */
+  }
+
+  .appCard:last-child {
+    border-bottom: none;
+  }
+  .applicationsGrid .icon p h3 {
+    margin-left: 20px;
+  }
+}
+
+/* =============================
+   Featured Products Section
+============================= */
+.featuredProducts {
+  color: #162C47;
+  text-align: center;
+  padding: 80px 70px;
+  position: relative;
+}
+
+.featuredProducts h2 span {
+  background: linear-gradient(276.27deg, #162C47 19.15%, rgba(22, 44, 71, 0.5) 91.75%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 4.5rem;
+}
+
+.featuredProducts h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.featuredSubtitle {
+  font-size: 1rem;
+  color: grey;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+/* Responsive padding reduction */
+@media (max-width: 768px) {
+  .featuredProducts {
+    padding: 60px 20px;
+  }
+}
+
+/* Product Cards Grid */
+.productGrid {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Stack cards vertically on small screens */
+@media (max-width: 768px) {
+  .productGrid {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+/* Base Card */
+.productCard {
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 250px; /* desktop width */
+  height: 350px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Full width on small screens */
+@media (max-width: 768px) {
+  .productCard {
+    width: 100%;
+    max-width: 350px; /* optional max width for phones */
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    transform: none !important; /* Remove rotate effects on mobile */
+  }
+}
+
+/* Card Image */
+.productCard img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+/* Title */
+.productCard h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 15px;
+  color: #fff;
+}
+
+/* On small screens reduce font size */
+@media (max-width: 768px) {
+  .productCard h3 {
+    font-size: 1.25rem;
+  }
+}
+
+/* Tilt Effects */
+.productCard.rotateLeft {
+  background: linear-gradient(135deg, #2D8E96 50%, #56AEB3 100%);
+}
+
+.productCard.rotateRight {
+  background: linear-gradient(180deg, #3768a5 0%, #464C72 100%);
+}
+
+.productCard.noRotate {
+  background: linear-gradient(180deg, #464C72 0%, #2B2F4A 100%);
+}
+
+/* Remove tilt effects on small screens */
+@media (max-width: 768px) {
+  .productCard.rotateLeft,
+  .productCard.rotateRight {
+    transform: none !important;
+    margin-top: 0 !important;
+  }
+}
+
+/* Explore Button */
+.productBtn {
+  background-color: lightgray;
+  color: #162C47;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 0px;
+}
+
+.productBtn:hover {
+  background-color: #003f82;
+  color: white;
+}
+
+/* Remove rotation on images for mobile */
+@media (max-width: 768px) {
+  .productCard .firstImage,
+  .productCard .thirdImage {
+    transform: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .featuredProducts h2 {
+    font-size: 2rem; /* smaller size for mobile */
+  }
+  
+  .featuredProducts h2 span {
+    font-size: 3rem; /* scale down the span text size as well */
+  }
+}
+
+/* =============================
+   News & Updates Section
+============================= */
+.newsUpdates {
+  color: #000;
+  padding: 100px 80px;
+  border-radius: 0;
+}
+
+/* Header layout for title + button */
+.newsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+
+/* Subtitle & Heading */
+.newsSubtitle {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  color: gray;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.newsUpdates h2 {
+  font-size: 3.2rem;
+  font-weight: 800;
+  margin: 0;
+  text-align: left;
+  line-height: 1.1;
+  color: #162C47;
+}
+
+.newsUpdates h2 span {
+  background: linear-gradient(276.27deg, #162c47 19.15%, rgba(22, 44, 71, 0.5) 91.75%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* "See More" Button aligned right */
+.seeMoreBtn {
+  background-color: #e53935;
+  color: #fff;
+  border: none;
+  padding: 14px 35px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  align-self: flex-end;
+}
+
+.seeMoreBtn:hover {
+  background-color: #c62828;
+}
+
+/* News grid layout */
+.newsGrid {
+  display: flex;
+  justify-content: center; /* ✅ Centers both cards equally */
+  align-items: stretch;
+  gap: 20px; /* Slightly smaller gap for balance */
+  flex-wrap: wrap;
+}
+
+/* Equal and responsive card widths */
+.newsCard {
+  background: #ffffff;
+  color: #162c47;
+  border-radius: 25px;
+  padding: 40px;
+  width: 580px; /* ✅ Wider card fills space evenly */
+  max-width: 100%;
+  text-align: left;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.newsCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+/* News content styles */
+.newsDate {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.newsCard h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.newsDesc {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Read More link */
+.newsLink {
+  color: #0056b3;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.newsLink:hover {
+  color: #003f82;
+}
+/* News images */
+.newsImg {
+  display: block;
+  margin: 0 auto 20px auto;
+  border-radius: 12px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Different image widths per card */
+.firstImg {
+  width: 100%;
+}
+
+.secondImg {
+  width: 100%;
+  height: 250px;
+}
+
+/* Hover zoom effect */
+.newsCard:hover .newsImg {
+  transform: scale(1.05);
+}
+
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .newsHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .seeMoreBtn {
+    margin-top: 20px;
+    align-self: flex-start;
+  }
+
+  .newsGrid {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .newsUpdates {
+    padding: 60px 25px;
+  }
+
+  .newsGrid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .newsCard {
+    width: 100%;
+    max-width: 420px;
+  }
+}

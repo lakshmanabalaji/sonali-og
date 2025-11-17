@@ -1,0 +1,822 @@
+/* ====================================
+   🌐 Resources Hero Section
+==================================== */
+
+.resources-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 160px 150px 80px;
+  background: #fff;
+  font-family: "Poppins", sans-serif;
+  color: #162c47;
+}
+
+/* Subtle noise overlay */
+.resources-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(22, 44, 71, 0.1);
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8Xw8AAtIBxPnc4RwAAAAASUVORK5CYII=");
+  background-repeat: repeat;
+  opacity: 0.15;
+  mix-blend-mode: overlay;
+  z-index: 0;
+}
+
+.resource-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Breadcrumb */
+.breadcrumb3 {
+  color: rgba(22, 44, 71, 0.5);
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: 415 !important;
+}
+
+.breadcrumb3 span {
+  color: rgba(0, 49, 87, 1);
+}
+
+/* Text Area */
+.resource-text-area {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+/* Headings */
+.resources-heading {
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  color: rgba(0, 49, 87, 1);
+}
+
+.resources-heading span {
+  background: linear-gradient(96.27deg, #003157 8.25%, rgba(0, 49, 87, 0.5) 80.85%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  font-size: 80px;
+  filter: contrast(110%);
+}
+
+/* Description Text */
+.resources-desc {
+  font-size: 20px;
+  color: rgba(22, 44, 71, 0.8);
+  max-width: 400px;
+  line-height: 1.2;
+  margin-top: 10px;
+  margin-left: 180px !important;
+}
+
+/* ====================================
+   🔽 Arrow (fixed above image)
+==================================== */
+.resources-arrow-container {
+  position: absolute;
+  top: -100px;
+  right: 230px;
+  width: 168.61px;
+  height: 168.61px;
+  z-index: 3;
+}
+
+.resources-arrow {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* ====================================
+   🖼️ Image Section
+==================================== */
+.resource-image-container {
+  position: relative;
+  margin-top: 40px;
+  z-index: 1;
+}
+
+.resource-hero-img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+/* ====================================
+   📱 Responsive Design
+==================================== */
+@media (max-width: 1200px) {
+  .resources-hero {
+    padding: 60px 30px 30px;
+  }
+
+  .resources-heading {
+    font-size: 48px;
+  }
+
+  .resources-heading span{
+    font-size: 60px;
+  }
+
+  .resources-desc {
+    font-size: 20px;
+  }
+
+  .resources-arrow-container {
+    top: -60px;
+    right: 100px;
+    width: 130px;
+    height: 130px;
+  }
+
+  .resource-hero-img {
+    width: 100%;
+    height: 180px;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+}
+
+/* ====================================
+   📱 Tablet + Mobile
+==================================== */
+@media (max-width: 768px) {
+  .resources-hero {
+    padding: 80px 20px 60px;
+  }
+
+  .resources-heading {
+    font-size: 40px;
+  }
+
+  .resources-desc {
+    max-width: 100%;
+    margin-left: 0 !important;
+  }
+
+  .resource-text-area {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  /* Hide arrow on tablet + mobile */
+  .resources-arrow-container {
+    display: none !important;
+  }
+}
+
+/* ====================================
+   📱 Small Mobile
+==================================== */
+@media (max-width: 576px) {
+  .resources-hero {
+    padding: 60px 20px 40px;
+  }
+
+  .resources-heading {
+    font-size: 32px;
+  }
+
+  .resources-desc {
+    font-size: 0.95rem;
+    margin-left: 0 !important;
+  }
+
+  /* Hide arrow on small mobile */
+  .resources-arrow-container {
+    display: none !important;
+  }
+}
+
+
+
+/* ====================================
+   🧠 Safety & Innovation Tips Section
+==================================== */
+
+.resources-tips {
+  background: #fff;
+  padding: 50px 150px 100px 150px;
+  font-family: "Poppins", sans-serif;
+  color: #162c47;
+}
+
+/* Header Area */
+.tips-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.tips-subtitle {
+  color: rgba(22, 44, 71, 0.4);
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.tips-heading {
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 1.1;
+  color: rgba(0, 49, 87, 1);
+}
+
+.tips-heading span {
+  background: linear-gradient(96.27deg, #003157 8.25%, rgba(0, 49, 87, 0.5) 80.85%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 100%;
+}
+
+.tips-desc {
+  max-width: 380px;
+  font-size: 20px;
+  color: rgba(22, 44, 71, 0.75);
+  line-height: 1.2;
+  margin-top: 45px;
+}
+
+/* Cards */
+.tips-cards {
+  display: flex;
+  gap: 30px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.tips-card {
+  flex: 1;
+  min-width: 280px;
+  background: #fff;
+  border-radius: 20px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tips-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.tips-card-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-bottom: 15px;
+}
+
+.tips-card-text {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #0f2342;
+  padding-left: 5px;
+}
+
+/* Footer Section */
+.tips-footer {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.tips-read-btn {
+  background: rgba(0, 49, 87, 1);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 14px 32px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.tips-read-btn:hover {
+  background: #6d96bb;
+  color: #fff;
+}
+
+.tips-read-btn .arrow {
+  margin-left: 8px;
+  color: #fff;
+}
+
+.tips-navigation {
+  display: flex;
+  gap: 12px;
+}
+
+.nav-btn {
+  background: transparent;
+  border: 1.5px solid rgba(0, 49, 87, 0.2);
+  color: #003157;
+  font-size: 1.3rem;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+  background: rgba(0, 49, 87, 0.1);
+}
+
+/* ====================================
+   📱 Responsive
+==================================== */
+@media (max-width: 992px) {
+  .resources-tips {
+    padding: 80px 60px;
+  }
+
+  .tips-heading {
+    font-size: 40px;
+  }
+
+  .tips-heading span {
+    font-size: 38px;
+  }
+
+  .tips-card-img {
+    height: 200px;
+  }
+
+  .tips-navigation {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .resources-tips {
+    padding: 60px 30px;
+  }
+
+  .tips-cards {
+    flex-direction: column;
+  }
+
+  .tips-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .tips-navigation {
+    display: none !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .tips-heading {
+    font-size: 32px;
+  }
+
+  .tips-card-img {
+    height: 180px;
+  }
+
+  .tips-navigation {
+    display: none !important;
+  }
+}
+
+
+
+
+/* ====================================
+   📰 Latest Updates Section (Asymmetric + Figma dimensions)
+==================================== */
+.resources-updates {
+  background: #fff;
+  padding: 100px 150px;
+  font-family: "Poppins", sans-serif;
+  color: #162c47;
+  background: rgba(0, 49, 87, 0.04);
+}
+
+/* Header */
+.updates-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.updates-subtitle {
+  color: rgba(22, 44, 71, 0.4);
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.updates-heading {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.1;
+  color: rgba(0, 49, 87, 1);
+}
+
+.updates-heading span {
+  background: linear-gradient(96.27deg, #003157 8.25%, rgba(0, 49, 87, 0.5) 80.85%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  font-size: 70px;
+}
+
+.updates-btn {
+  background: rgba(0, 49, 87, 1);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 28px;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.updates-btn:hover {
+  background: #6d96bb;
+  color: #fff;
+}
+
+/* ====================================
+   🧱 Cards Layout (Asymmetric)
+==================================== */
+.updates-cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: nowrap; /* ✅ Prevent cards from stacking */
+}
+
+.update-card {
+  background: transparent;
+  border-radius: 20px;
+  /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Asymmetric sizing */
+.update-card.small {
+  flex: 0 0 38%;
+}
+
+.update-card.large {
+  flex: 0 0 58%;
+}
+
+/* ====================================
+   🖼️ Image Styling (Figma Dimensions)
+==================================== */
+.small-img,
+.large-img {
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
+  object-fit: cover;
+}
+
+/* Maintain Figma proportions */
+.update-card.small .small-img {
+  aspect-ratio: 493 / 327;
+}
+
+.update-card.large .large-img {
+  aspect-ratio: 730 / 350;
+}
+
+/* ====================================
+   🕓 Text Styling
+==================================== */
+.update-date {
+  font-size: 0.95rem;
+  color: rgba(22, 44, 71, 0.7);
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.calendar-icon {
+  font-size: 1.1rem;
+  color: rgba(0, 49, 87, 0.9);
+  margin-bottom: 2px;
+}
+
+.update-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #0f2342;
+  margin: 10px 0;
+}
+
+.update-desc {
+  font-size: 1rem;
+  color: rgba(22, 44, 71, 0.8);
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.update-link {
+  color: rgba(0, 49, 87, 1);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.update-link:hover {
+  text-decoration: underline;
+}
+
+/* ====================================
+   📱 Responsive Design
+==================================== */
+@media (max-width: 1200px) {
+  .resources-updates {
+    padding: 80px 60px;
+  }
+
+  .updates-heading {
+    font-size: 42px;
+  }
+
+  .updates-cards {
+    gap: 30px;
+    flex-wrap: wrap; /* ✅ allow stacking below 1200px */
+  }
+
+  .update-card.small,
+  .update-card.large {
+    flex: 1 1 100%;
+  }
+
+  .small-img,
+  .large-img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .resources-updates {
+    padding: 60px 30px;
+  }
+
+  .updates-heading {
+    font-size: 34px;
+  }
+
+  .updates-cards {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .update-card.small,
+  .update-card.large {
+    flex: 1 1 100%;
+  }
+
+  .update-title {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .resources-updates {
+    padding: 50px 20px;
+  }
+
+  .updates-heading {
+    font-size: 28px;
+  }
+
+  .update-date {
+    font-size: 0.9rem;
+  }
+
+  .update-title {
+    font-size: 1.1rem;
+  }
+
+  .update-desc {
+    font-size: 0.95rem;
+  }
+}
+
+
+
+/* ====================================
+   🧾 Catalogues & Certifications Section
+==================================== */
+.resources-certifications {
+  background: #fff;
+  padding: 100px 150px;
+  font-family: "Poppins", sans-serif;
+  color: #162c47;
+}
+
+/* Header */
+.certify-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.certify-subtitle {
+  color: rgba(22, 44, 71, 0.4);
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.certify-heading {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.1;
+  color: #0f2342;
+}
+
+.certify-heading span {
+  background: linear-gradient(96.27deg, #003157 8.25%, rgba(0, 49, 87, 0.5) 80.85%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+.certify-desc {
+  font-size: 20px;
+  color: rgba(22, 44, 71, 0.8);
+  max-width: 350px;
+  line-height: 1.2;
+}
+
+/* ====================================
+   📄 Certificates Grid
+==================================== */
+.certify-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 70px 80px;
+}
+
+.certify-card {
+  text-align: center;
+  height: 360px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: #fff;
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* FIX: Prevent distortion */
+.certify-img {
+  width: auto;
+  height: 360px;
+  max-width: 100%;
+  object-fit: contain;
+  background-color: #f9f9f9;
+  border-radius: 20px;
+  padding: 10px;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+
+.certify-title {
+  margin-top: 15px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #0f2342;
+  line-height: 1.4;
+}
+
+/* ====================================
+   📱 Responsive Design
+==================================== */
+@media (max-width: 1400px) {
+  .certify-img {
+    height: 250px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .resources-certifications {
+    padding: 80px 60px;
+  }
+
+  .certify-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  .certify-heading {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .certify-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .certify-card {
+    height: 360px;
+  }
+
+  .certify-img {
+    height: 230px;
+  }
+
+  .certify-heading {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .resources-certifications {
+    padding: 60px 30px;
+  }
+
+  .certify-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .certify-card {
+    height: 340px;
+  }
+
+  .certify-img {
+    height: 210px;
+  }
+}
+
+/* ====================================
+   📱 MOBILE (≤576px)
+   👉 Cards become horizontal scroll
+==================================== */
+@media (max-width: 576px) {
+  .resources-certifications {
+    padding: 50px 20px;
+  }
+
+  /* Horizontal scroll for cards */
+  .certify-grid {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 20px;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 10px;
+  }
+
+  .certify-card {
+    flex: 0 0 260px; /* Width of each card */
+    height: auto;
+    scroll-snap-align: start;
+  }
+
+  .certify-img {
+    height: auto;
+    width: 100%;
+  }
+
+  .certify-heading {
+    font-size: 28px;
+  }
+
+  .certify-title {
+    font-size: 0.95rem;
+  }
+
+  /* Hide scrollbar for cleaner look */
+  .certify-grid::-webkit-scrollbar {
+    display: none;
+  }
+}
