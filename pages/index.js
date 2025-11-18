@@ -1,14 +1,37 @@
 import React, { useState } from "react";
-import Hyperspeed from "../components/Hyperspeed";
 import { hyperspeedPresets } from "../components/hyperspeedPresets";
+import HyperspeedLoader from "../components/HyperspeedLoader";
+import SEO from "../components/SEO";
+// background hero uses a normal <img> to preserve original layout
 
 const Home = () => {
   const [showChat, setShowChat] = useState(false);
 
   return (
     <>
+      <SEO
+        title="Home"
+        description="Safe, reliable, and innovative copper wiring solutions powering homes, industries & agriculture."
+        canonical="/"
+        openGraph={{ image: '/images/optimized/Layer1-opt.webp' }}
+        preloadImages={["/images/optimized/Layer1-opt.webp"]}
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Sonali Wires",
+          "url": "/"
+        }}
+      />
       <div className="homeContainer">
-        <Hyperspeed effectOptions={hyperspeedPresets.one} />
+  <HyperspeedLoader effectOptions={hyperspeedPresets.one} />
+
+        {/* background image (hero) - reverted to original <img> to preserve layout */}
+        <img
+          src="/images/optimized/Layer1-opt.webp"
+          alt=""
+          aria-hidden="true"
+          style={{ position: 'absolute', inset: 0, zIndex: -1, width: '100%', height: '100%', objectFit: 'cover' }}
+        />
 
         <div className="overlay">
           <h1>
@@ -31,7 +54,7 @@ const Home = () => {
           </div>
         </div>
 
-        {/* WhatsApp Floating Chat */}
+  {/* WhatsApp Floating Chat */}
         <div className="position-fixed bottom-0 end-0 mb-4 me-4" style={{ zIndex: 1000 }}>
           {showChat && (
             <div className="card shadow-lg mb-3" style={{ width: '300px' }}>

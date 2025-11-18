@@ -1,0 +1,254 @@
+{
+  "/images/dress_code.png": {
+    "webp": "/images/optimized/dress_code-opt.webp",
+    "jpg": "/images/optimized/dress_code-opt.jpg"
+  },
+  "/images/linkedin.png": {
+    "webp": "/images/optimized/linkedin-opt.webp",
+    "jpg": "/images/optimized/linkedin-opt.jpg"
+  },
+  "/images/linkedin1.png": {
+    "webp": "/images/optimized/linkedin1-opt.webp",
+    "jpg": "/images/optimized/linkedin1-opt.jpg"
+  },
+  "/images/manufacture.png": {
+    "webp": "/images/optimized/manufacture-opt.webp",
+    "jpg": "/images/optimized/manufacture-opt.jpg"
+  },
+  "/images/map-india.png": {
+    "webp": "/images/optimized/map-india-opt.webp",
+    "jpg": "/images/optimized/map-india-opt.jpg"
+  },
+  "/images/learning.png": {
+    "webp": "/images/optimized/learning-opt.webp",
+    "jpg": "/images/optimized/learning-opt.jpg"
+  },
+  "/images/skill.png": {
+    "webp": "/images/optimized/skill-opt.webp",
+    "jpg": "/images/optimized/skill-opt.jpg"
+  },
+  "/images/environment.png": {
+    "webp": "/images/optimized/environment-opt.webp",
+    "jpg": "/images/optimized/environment-opt.jpg"
+  },
+  "/images/rewards.png": {
+    "webp": "/images/optimized/rewards-opt.webp",
+    "jpg": "/images/optimized/rewards-opt.jpg"
+  },
+  "/images/innovate.png": {
+    "webp": "/images/optimized/innovate-opt.webp",
+    "jpg": "/images/optimized/innovate-opt.jpg"
+  },
+  "/images/bg_first_div.png": {
+    "webp": "/images/optimized/bg_first_div-opt.webp",
+    "jpg": "/images/optimized/bg_first_div-opt.jpg"
+  },
+  "/images/star.png": {
+    "webp": "/images/optimized/star-opt.webp",
+    "jpg": "/images/optimized/star-opt.jpg"
+  },
+  "/images/career_1.jpg": {
+    "webp": "/images/optimized/career_1-opt.webp",
+    "jpg": "/images/optimized/career_1-opt.jpg"
+  },
+  "/images/career_2.jpg": {
+    "webp": "/images/optimized/career_2-opt.webp",
+    "jpg": "/images/optimized/career_2-opt.jpg"
+  },
+  "/images/career_3.jpg": {
+    "webp": "/images/optimized/career_3-opt.webp",
+    "jpg": "/images/optimized/career_3-opt.jpg"
+  },
+  "/images/career_4.png": {
+    "webp": "/images/optimized/career_4-opt.webp",
+    "jpg": "/images/optimized/career_4-opt.jpg"
+  },
+  "/images/contact.jpg": {
+    "webp": "/images/optimized/contact-opt.webp",
+    "jpg": "/images/optimized/contact-opt.jpg"
+  },
+  "/images/map.png": {
+    "webp": "/images/optimized/map-opt.webp",
+    "jpg": "/images/optimized/map-opt.jpg"
+  },
+  "/images/location_icon.png": {
+    "webp": "/images/optimized/location_icon-opt.webp",
+    "jpg": "/images/optimized/location_icon-opt.jpg"
+  },
+  "/images/contact_icon.png": {
+    "webp": "/images/optimized/contact_icon-opt.webp",
+    "jpg": "/images/optimized/contact_icon-opt.jpg"
+  },
+  "/images/mail_icon.png": {
+    "webp": "/images/optimized/mail_icon-opt.webp",
+    "jpg": "/images/optimized/mail_icon-opt.jpg"
+  },
+  "/images/wires1-news.png": {
+    "webp": "/images/optimized/wires1-news-opt.webp",
+    "jpg": "/images/optimized/wires1-news-opt.jpg"
+  },
+  "/images/wires-news.png": {
+    "webp": "/images/optimized/wires-news-opt.webp",
+    "jpg": "/images/optimized/wires-news-opt.jpg"
+  },
+  "/images/resource.png": {
+    "webp": "/images/optimized/resource-opt.webp",
+    "jpg": "/images/optimized/resource-opt.jpg"
+  },
+  "/images/certified_safety.png": {
+    "webp": "/images/optimized/certified_safety-opt.webp",
+    "jpg": "/images/optimized/certified_safety-opt.jpg"
+  },
+  "/images/durability.png": {
+    "webp": "/images/optimized/durability-opt.webp",
+    "jpg": "/images/optimized/durability-opt.jpg"
+  },
+  "/images/innovation.png": {
+    "webp": "/images/optimized/innovation-opt.webp",
+    "jpg": "/images/optimized/innovation-opt.jpg"
+  },
+  "/images/approach_assurance.png": {
+    "webp": "/images/optimized/approach_assurance-opt.webp",
+    "jpg": "/images/optimized/approach_assurance-opt.jpg"
+  },
+  "/images/approach_shield.png": {
+    "webp": "/images/optimized/approach_shield-opt.webp",
+    "jpg": "/images/optimized/approach_shield-opt.jpg"
+  },
+  "/images/approach_bis.png": {
+    "webp": "/images/optimized/approach_bis-opt.webp",
+    "jpg": "/images/optimized/approach_bis-opt.jpg"
+  },
+  "/images/approach_isi.png": {
+    "webp": "/images/optimized/approach_isi-opt.webp",
+    "jpg": "/images/optimized/approach_isi-opt.jpg"
+  },
+  "/images/approach_iso.png": {
+    "webp": "/images/optimized/approach_iso-opt.webp",
+    "jpg": "/images/optimized/approach_iso-opt.jpg"
+  },
+  "/images/approach_sustainability.png": {
+    "webp": "/images/optimized/approach_sustainability-opt.webp",
+    "jpg": "/images/optimized/approach_sustainability-opt.jpg"
+  },
+  "/images/wire1.png": {
+    "webp": "/images/optimized/wire1-opt.webp",
+    "jpg": "/images/optimized/wire1-opt.jpg"
+  },
+  "/images/wire2.png": {
+    "webp": "/images/optimized/wire2-opt.webp",
+    "jpg": "/images/optimized/wire2-opt.jpg"
+  },
+  "/images/wire3.png": {
+    "webp": "/images/optimized/wire3-opt.webp",
+    "jpg": "/images/optimized/wire3-opt.jpg"
+  },
+  "/images/wire4.png": {
+    "webp": "/images/optimized/wire4-opt.webp",
+    "jpg": "/images/optimized/wire4-opt.jpg"
+  },
+  "/images/wire5.png": {
+    "webp": "/images/optimized/wire5-opt.webp",
+    "jpg": "/images/optimized/wire5-opt.jpg"
+  },
+  "/images/sustainability.png": {
+    "webp": "/images/optimized/sustainability-opt.webp",
+    "jpg": "/images/optimized/sustainability-opt.jpg"
+  },
+  "/images/integrity.png": {
+    "webp": "/images/optimized/integrity-opt.webp",
+    "jpg": "/images/optimized/integrity-opt.jpg"
+  },
+  "/images/cert1.jpg": {
+    "webp": "/images/optimized/cert1-opt.webp",
+    "jpg": "/images/optimized/cert1-opt.jpg"
+  },
+  "/images/cert2.jpg": {
+    "webp": "/images/optimized/cert2-opt.webp",
+    "jpg": "/images/optimized/cert2-opt.jpg"
+  },
+  "/images/cert3.jpg": {
+    "webp": "/images/optimized/cert3-opt.webp",
+    "jpg": "/images/optimized/cert3-opt.jpg"
+  },
+  "/images/cert4.jpg": {
+    "webp": "/images/optimized/cert4-opt.webp",
+    "jpg": "/images/optimized/cert4-opt.jpg"
+  },
+  "/images/cert5.jpg": {
+    "webp": "/images/optimized/cert5-opt.webp",
+    "jpg": "/images/optimized/cert5-opt.jpg"
+  },
+  "/images/cert6.jpg": {
+    "webp": "/images/optimized/cert6-opt.webp",
+    "jpg": "/images/optimized/cert6-opt.jpg"
+  },
+  "/images/cert7.jpg": {
+    "webp": "/images/optimized/cert7-opt.webp",
+    "jpg": "/images/optimized/cert7-opt.jpg"
+  },
+  "/images/cert8.jpg": {
+    "webp": "/images/optimized/cert8-opt.webp",
+    "jpg": "/images/optimized/cert8-opt.jpg"
+  },
+  "/images/resources_first_div.png": {
+    "webp": "/images/optimized/resources_first_div-opt.webp",
+    "jpg": "/images/optimized/resources_first_div-opt.jpg"
+  },
+  "/images/resources_down_arrow.png": {
+    "webp": "/images/optimized/resources_down_arrow-opt.webp",
+    "jpg": "/images/optimized/resources_down_arrow-opt.jpg"
+  },
+  "/images/man.jpg": {
+    "webp": "/images/optimized/man-opt.webp",
+    "jpg": "/images/optimized/man-opt.jpg"
+  },
+  "/images/fire.jpg": {
+    "webp": "/images/optimized/fire-opt.webp",
+    "jpg": "/images/optimized/fire-opt.jpg"
+  },
+  "/images/looms.png": {
+    "webp": "/images/optimized/looms-opt.webp",
+    "jpg": "/images/optimized/looms-opt.jpg"
+  },
+  "/images/resources_news.jpg": {
+    "webp": "/images/optimized/resources_news-opt.webp",
+    "jpg": "/images/optimized/resources_news-opt.jpg"
+  },
+  "/images/resources_wire.jpg": {
+    "webp": "/images/optimized/resources_wire-opt.webp",
+    "jpg": "/images/optimized/resources_wire-opt.jpg"
+  },
+  "/images/Layer1.png": {
+    "webp": "/images/optimized/Layer1-opt.webp",
+    "jpg": "/images/optimized/Layer1-opt.jpg"
+  },
+  "/images/rohs.png": {
+    "webp": "/images/optimized/rohs-opt.webp",
+    "jpg": "/images/optimized/rohs-opt.jpg"
+  },
+  "/images/reach-compliant.webp": {
+    "webp": "/images/optimized/reach-compliant-opt.webp",
+    "jpg": "/images/optimized/reach-compliant-opt.jpg"
+  },
+  "/images/isi.png": {
+    "webp": "/images/optimized/isi-opt.webp",
+    "jpg": "/images/optimized/isi-opt.jpg"
+  },
+  "/images/iso-9001.png": {
+    "webp": "/images/optimized/iso-9001-opt.webp",
+    "jpg": "/images/optimized/iso-9001-opt.jpg"
+  },
+  "/images/iso-14001.png": {
+    "webp": "/images/optimized/iso-14001-opt.webp",
+    "jpg": "/images/optimized/iso-14001-opt.jpg"
+  },
+  "/images/iso-45001.png": {
+    "webp": "/images/optimized/iso-45001-opt.webp",
+    "jpg": "/images/optimized/iso-45001-opt.jpg"
+  },
+  "/images/pure-copper.png": {
+    "webp": "/images/optimized/pure-copper-opt.webp",
+    "jpg": "/images/optimized/pure-copper-opt.jpg"
+  }
+}

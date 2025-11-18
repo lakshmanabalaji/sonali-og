@@ -1,8 +1,14 @@
 import React from 'react';
+import SEO from "../components/SEO";
 
 const Innovation = () => {
   return (
     <>
+    <SEO
+      title="Innovation & Quality"
+      description="Discover Sonali Wires' innovation and quality assurance practices — R&D, NABL testing, and sustainable manufacturing for safer copper solutions."
+      canonical="/innovation"
+    />
     <div className="innovation-hero">
       {/* Left side: text content */}
       <div className="inno-hero-content">

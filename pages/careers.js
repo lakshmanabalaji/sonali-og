@@ -1,4 +1,6 @@
 import React from "react";
+import SEO from "../components/SEO";
+// revert hero background to original <img> so CSS (.careers-bg) applies unchanged
 import { FiMapPin } from "react-icons/fi";
 import { BiBriefcase } from "react-icons/bi";
 
@@ -52,9 +54,37 @@ const Careers = () => {
 
   return (
     <>
+      <SEO
+        title="Careers"
+        description="Join Sonali Wires LLP — explore open roles in production, quality, sales and more. Build your future with us."
+        canonical="/careers"
+        openGraph={{ image: '/images/optimized/career_1-opt.webp' }}
+        preloadImages={["/images/optimized/career_1-opt.webp"]}
+        jsonLd={jobOpenings.map((job, index) => ({
+          "@context": "https://schema.org",
+          "@type": "JobPosting",
+          "title": job.title,
+          "description": job.responsibilities,
+          "employmentType": job.type,
+          "hiringOrganization": {
+            "@type": "Organization",
+            "name": "Sonali Wires LLP",
+            "sameAs": "https://sonaliwires.com/"
+          },
+          "jobLocation": {
+            "@type": "Place",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": job.location,
+              "addressCountry": "IN"
+            }
+          }
+        }))}
+      />
       {/* ===== HERO SECTION ===== */}
       <div className="careers-hero">
-        <img src="/images/bg_first_div.png" alt="Careers Hero" className="careers-bg" />
+  {/* revert to original background image element so .careers-bg CSS controls object-fit/position */}
+  <img src="/images/optimized/bg_first_div-opt.webp" alt="Careers Hero" className="careers-bg" aria-hidden="true" />
         <div className="careers-overlay"></div>
 
         <div className="container careers-content">

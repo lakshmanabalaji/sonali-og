@@ -1,15 +1,30 @@
 import React from "react";
+import SEO from "../components/SEO";
+// hero background reverted to plain <img> to restore original CSS behavior
 
 const OurProducts = () => {
   return (
     <>
+      <SEO
+        title="Our Products"
+        description="Explore Sonali Wires' range of BIS-certified copper wires and cables for residential, industrial and agricultural applications."
+        canonical="/products"
+        openGraph={{ image: '/images/optimized/wire1-opt.webp' }}
+        preloadImages={["/images/optimized/wire1-opt.webp"]}
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Three Core Flat Cables" },
+            { "@type": "ListItem", "position": 2, "name": "Housing Wires" },
+            { "@type": "ListItem", "position": 3, "name": "Submersible Winding Wires" },
+            { "@type": "ListItem", "position": 4, "name": "Industrial Cables" }
+          ]
+        }}
+      />
       <div className="products-hero">
-        <img
-          src="/images/wire1.png"
-          alt="Copper Wires"
-          className="hero-wire-image"
-          aria-hidden="true"
-        />
+  {/* hero background uses optimized WebP now */}
+  <img src="/images/optimized/wire1-opt.webp" alt="Copper Wires" className="hero-wire-image" aria-hidden="true" />
         <div className="container hero-content">
           <p className="breadcrumb1">Home &gt; Our Products</p>
           <div className="hero-headline-group">

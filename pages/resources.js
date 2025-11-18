@@ -1,4 +1,5 @@
 import React from "react";
+import SEO from "../components/SEO";
 import { FiCalendar } from "react-icons/fi"; // ✅ calendar icon
 
 const certificates = [
@@ -15,6 +16,11 @@ const certificates = [
 const Resources = () => {
   return (
     <>
+      <SEO
+        title="Resources"
+        description="Media, resources and product documentation from Sonali Wires — guides, news, catalogues and certifications."
+        canonical="/resources"
+      />
       {/* ===== HERO SECTION ===== */}
       <div className="resources-hero">
         <div className="container resource-content">

@@ -1,10 +1,16 @@
 import React, { useState } from "react";
+import SEO from "../components/SEO";
 
 const Contact = () => {
   const [activeTab, setActiveTab] = useState("general");
 
   return (
     <>
+      <SEO
+        title="Contact Us"
+        description="Get in touch with Sonali Wires for product enquiries, dealer opportunities, and support. Find contact details and our headquarters information."
+        canonical="/contact"
+      />
       {/* ===========================
           HERO SECTION
       =========================== */}

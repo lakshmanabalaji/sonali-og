@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useMemo } from "react";
+import SEO from "../components/SEO";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { FaShieldAlt, FaCogs, FaLightbulb, FaLeaf, FaHeart } from "react-icons/fa";
 import { FaTrophy } from "react-icons/fa";
@@ -15,6 +16,11 @@ const About = () => {
   const goTo = (i) => setActiveIndex(i);
   return (
     <>
+      <SEO
+        title="About Us"
+        description="Learn about Sonali Wires LLP — our vision, mission, leadership, and commitment to quality and safety in copper wire manufacturing."
+        canonical="/about"
+      />
       {/* ========= Top Blue Section ========= */}
       <div className="about-container">
         <div className="about-content container">
