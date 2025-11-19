@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaWhatsapp } from 'react-icons/fa';
+import { FiCalendar } from 'react-icons/fi';
 import { hyperspeedPresets } from "../components/hyperspeedPresets";
 import HyperspeedLoader from "../components/HyperspeedLoader";
 import SEO from "../components/SEO";
@@ -222,54 +223,69 @@ const Home = () => {
         </div>
       </div>
 
-      {/* News & Updates Section */}
-      <div className="newsUpdates">
-        <div className="newsHeader">
-          <div>
-            <p className="newsSubtitle">News & Updates</p>
-            <h2>
-              Latest Updates from <br />
-              <span>Sonali Wires</span>
-            </h2>
-          </div>
-          <button className="seeMoreBtn">See More News →</button>
-        </div>
-
-          <div className="newsGrid">
-          {/* News Card 1 */}
-          <div className="newsCard">
-            <div style={{ position: 'relative', width: 420, height: 240 }}>
-              <Image src="/images/wires1-news.png" alt="Expo Participation" fill style={{objectFit: 'cover'}} />
+      {/* ===== LATEST UPDATES SECTION ===== */}
+            <div className="resources-updates">
+              <div className="container">
+                <div className="updates-header">
+                  <div>
+                    <p className="updates-subtitle">News & Events</p>
+                    <h2 className="updates-heading">
+                      Latest Updates from <br />
+                      <span>Sonali Wires</span>
+                    </h2>
+                  </div>
+      
+                  <button className="btn updates-btn">See More News →</button>
+                </div>
+      
+                <div className="updates-cards">
+                  {/* Left Small Card */}
+                  <div className="update-card small">
+                    <img
+                      src="/images/resources_news.jpg"
+                      alt="Electrical Expo"
+                      className="update-card-img small-img"
+                    />
+                    <p className="update-date">
+                      <FiCalendar className="calendar-icon" /> July 2, 2025
+                    </p>
+                    <h3 className="update-title">
+                      Participation in India Electrical Expo 2025
+                    </h3>
+                    <p className="update-desc">
+                      Sonali Wires LLP showcased its latest product innovations and
+                      manufacturing excellence at the India Electrical Expo 2025.
+                    </p>
+                    <a href="https://www.electricexpo.co.in/" className="update-link">
+                      Read More →
+                    </a>
+                  </div>
+      
+                  {/* Right Large Card */}
+                  <div className="update-card large">
+                    <img
+                      src="/images/resources_wire.jpg"
+                      alt="HFFR Housing Wires"
+                      className="update-card-img large-img"
+                    />
+                    <p className="update-date">
+                      <FiCalendar className="calendar-icon" /> July 2, 2025
+                    </p>
+                    <h3 className="update-title">
+                      Launch of HFFR housing wires for safer homes
+                    </h3>
+                    <p className="update-desc">
+                      We are proud to introduce our new range of Halogen Free Flame
+                      Retardant (HFFR) housing wires. Designed for modern households,
+                      these wires emit minimal smoke and zero halogen.
+                    </p>
+                    <a href="https://www.electricexpo.co.in/" className="update-link">
+                      Read More →
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
-            <p className="newsDate">July 2, 2025</p>
-            <h3>Participation in India Electrical Expo 2025</h3>
-            <p className="newsDesc">
-              Sonali Wires LLP showcased its latest product innovations and
-              manufacturing excellence at the India Electrical Expo 2025.
-            </p>
-            <a href="https://sonaliwires.com/" className="newsLink">
-              Read More →
-            </a>
-          </div>
-
-          {/* News Card 2 */}
-          <div className="newsCard">
-            <div style={{ position: 'relative', width: 420, height: 240 }}>
-              <Image src="/images/wires-news.png" alt="HFFR Wires Launch" fill style={{objectFit: 'cover'}} />
-            </div>
-            <p className="newsDate">July 2, 2025</p>
-            <h3>Launch of HFFR housing wires for safer homes</h3>
-            <p className="newsDesc">
-              We are proud to introduce our new range of Halogen Free Flame Retardant
-              (HFFR) housing wires. Designed for modern households, these wires emit
-              minimal smoke and zero halogen.
-            </p>
-            <a href="https://sonaliwires.com/" className="newsLink">
-              Read More →
-            </a>
-          </div>
-        </div>
-      </div>
     </>
   );
 };

@@ -316,7 +316,7 @@ h1 span::selection { background: transparent; color: inherit; }
   justify-content: space-between;
   align-items: flex-start;
   
-  padding: 100px 150px;
+  padding: 100px 70px;
   background-color: #f5f7fa;
   color: #162C47;
   gap: 10px;
@@ -478,7 +478,7 @@ h1 span::selection { background: transparent; color: inherit; }
 .applicationsSection {
   background-color: #0e2439;
   color: #fff;
-  padding: 100px 150px;
+  padding: 80px 70px;
   text-align: left;
 }
 
@@ -590,7 +590,7 @@ h1 span::selection { background: transparent; color: inherit; }
 .featuredProducts {
   color: #162C47;
   text-align: center;
-  padding: 100px 150px;
+  padding: 80px 70px;
   position: relative;
 }
 
@@ -744,178 +744,224 @@ h1 span::selection { background: transparent; color: inherit; }
   }
 }
 
-/* =============================
-   News & Updates Section
-============================= */
-.newsUpdates {
-  color: #000;
+/* ====================================
+   📰 Latest Updates Section (Asymmetric + Figma dimensions)
+==================================== */
+.resources-updates {
+  background: #fff;
   padding: 100px 150px;
-  border-radius: 0;
+  font-family: "Poppins", sans-serif;
+  color: #162c47;
+  background: rgba(0, 49, 87, 0.04);
 }
 
-/* Header layout for title + button */
-.newsHeader {
+/* Header */
+.updates-header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
-  margin-bottom: 60px;
+  align-items: flex-start;
   flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 40px;
 }
 
-/* Subtitle & Heading */
-.newsSubtitle {
-  font-size: 1.3rem;
-  text-transform: uppercase;
-  color: gray;
+.updates-subtitle {
+  color: rgba(22, 44, 71, 0.4);
+  font-size: 0.95rem;
   margin-bottom: 10px;
-  text-align: left;
 }
 
-.newsUpdates h2 {
-  font-size: 3.2rem;
-  font-weight: 800;
-  margin: 0;
-  text-align: left;
+.updates-heading {
+  font-size: 48px;
+  font-weight: 600;
   line-height: 1.1;
-  color: #162C47;
+  color: rgba(0, 49, 87, 1);
 }
 
-.newsUpdates h2 span {
-  background: linear-gradient(276.27deg, #162c47 19.15%, rgba(22, 44, 71, 0.5) 91.75%);
+.updates-heading span {
+  background: linear-gradient(96.27deg, #003157 8.25%, rgba(0, 49, 87, 0.5) 80.85%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  font-size: 70px;
 }
 
-/* "See More" Button aligned right */
-.seeMoreBtn {
-  background-color: #e53935;
+.updates-btn {
+  background: rgba(0, 49, 87, 1);
   color: #fff;
   border: none;
-  padding: 14px 35px;
-  border-radius: 30px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  align-self: flex-end;
-}
-
-.seeMoreBtn:hover {
-  background-color: #c62828;
-}
-
-/* News grid layout */
-.newsGrid {
-  display: flex;
-  justify-content: center; /* ✅ Centers both cards equally */
-  align-items: stretch;
-  gap: 20px; /* Slightly smaller gap for balance */
-  flex-wrap: wrap;
-}
-
-/* Equal and responsive card widths */
-.newsCard {
-  background: #ffffff;
-  color: #162c47;
   border-radius: 25px;
-  padding: 40px;
-  width: 580px; /* ✅ Wider card fills space evenly */
-  max-width: 100%;
-  text-align: left;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.newsCard:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-}
-
-
-/* News content styles */
-.newsDate {
+  padding: 10px 28px;
   font-size: 1rem;
-  color: #666;
-  margin-bottom: 10px;
+  transition: background 0.3s ease;
 }
 
-.newsCard h3 {
-  font-size: 1.4rem;
-  font-weight: 700;
+.updates-btn:hover {
+  background: #6d96bb;
+  color: #fff;
+}
+
+/* ====================================
+   🧱 Cards Layout (Asymmetric)
+==================================== */
+.updates-cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: nowrap; /* ✅ Prevent cards from stacking */
+}
+
+.update-card {
+  background: transparent;
+  border-radius: 20px;
+  /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Asymmetric sizing */
+.update-card.small {
+  flex: 0 0 38%;
+}
+
+.update-card.large {
+  flex: 0 0 58%;
+}
+
+/* ====================================
+   🖼️ Image Styling (Figma Dimensions)
+==================================== */
+.small-img,
+.large-img {
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
+  object-fit: cover;
+}
+
+/* Maintain Figma proportions */
+.update-card.small .small-img {
+  aspect-ratio: 493 / 327;
+}
+
+.update-card.large .large-img {
+  aspect-ratio: 730 / 350;
+}
+
+/* ====================================
+   🕓 Text Styling
+==================================== */
+.update-date {
+  font-size: 0.95rem;
+  color: rgba(22, 44, 71, 0.7);
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.calendar-icon {
+  font-size: 1.1rem;
+  color: rgba(0, 49, 87, 0.9);
+  margin-bottom: 2px;
+}
+
+.update-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #0f2342;
+  margin: 10px 0;
+}
+
+.update-desc {
+  font-size: 1rem;
+  color: rgba(22, 44, 71, 0.8);
+  line-height: 1.6;
   margin-bottom: 15px;
 }
 
-.newsDesc {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-/* Read More link */
-.newsLink {
-  color: #0056b3;
-  font-weight: 600;
+.update-link {
+  color: rgba(0, 49, 87, 1);
+  font-weight: 500;
   text-decoration: none;
-  transition: color 0.3s ease;
 }
 
-.newsLink:hover {
-  color: #003f82;
-}
-/* News images */
-.newsImg {
-  display: block;
-  margin: 0 auto 20px auto;
-  border-radius: 12px;
-  object-fit: cover;
-  transition: transform 0.3s ease;
+.update-link:hover {
+  text-decoration: underline;
 }
 
-/* Different image widths per card */
-.firstImg {
-  width: 100%;
-}
-
-.secondImg {
-  width: 100%;
-  height: 250px;
-}
-
-/* Hover zoom effect */
-.newsCard:hover .newsImg {
-  transform: scale(1.05);
-}
-
-
-/* Responsive */
-@media (max-width: 1024px) {
-  .newsHeader {
-    flex-direction: column;
-    align-items: flex-start;
+/* ====================================
+   📱 Responsive Design
+==================================== */
+@media (max-width: 1200px) {
+  .resources-updates {
+    padding: 80px 60px;
   }
 
-  .seeMoreBtn {
-    margin-top: 20px;
-    align-self: flex-start;
+  .updates-heading {
+    font-size: 42px;
   }
 
-  .newsGrid {
-    justify-content: center;
+  .updates-cards {
+    gap: 30px;
+    flex-wrap: wrap; /* ✅ allow stacking below 1200px */
+  }
+
+  .update-card.small,
+  .update-card.large {
+    flex: 1 1 100%;
+  }
+
+  .small-img,
+  .large-img {
+    width: 100%;
+    height: auto;
   }
 }
 
 @media (max-width: 768px) {
-  .newsUpdates {
-    padding: 60px 25px;
+  .resources-updates {
+    padding: 60px 30px;
   }
 
-  .newsGrid {
+  .updates-heading {
+    font-size: 34px;
+  }
+
+  .updates-cards {
     flex-direction: column;
-    align-items: center;
+    gap: 40px;
   }
 
-  .newsCard {
-    width: 100%;
-    max-width: 420px;
+  .update-card.small,
+  .update-card.large {
+    flex: 1 1 100%;
+  }
+
+  .update-title {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .resources-updates {
+    padding: 50px 20px;
+  }
+
+  .updates-heading {
+    font-size: 28px;
+  }
+
+  .update-date {
+    font-size: 0.9rem;
+  }
+
+  .update-title {
+    font-size: 1.1rem;
+  }
+
+  .update-desc {
+    font-size: 0.95rem;
   }
 }
