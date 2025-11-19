@@ -72,7 +72,7 @@ npm start
 ## Project Structure
 
 ```
-sonali-nextjs/
+sonali-og/
 ├── pages/
 │   ├── _app.js          # Global app wrapper
 │   ├── _document.js     # HTML document structure
@@ -101,7 +101,12 @@ sonali-nextjs/
 │   ├── Resources.css
 │   └── Contact.css
 ├── public/
-│   └── images/          # All static images (81 files)
+│   ├── images/          # All static images
+│   ├── icons/           # SVG icons (e.g. red-bg-whatsapp.svg)
+│   ├── robots.txt       # SEO: robots.txt
+│   └── sitemap.xml      # SEO: sitemap.xml
+├── docs/
+│   └── SEO_GUIDELINES.md # SEO best practices
 ├── package.json
 ├── next.config.ts
 └── README.md

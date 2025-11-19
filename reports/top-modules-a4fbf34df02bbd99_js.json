@@ -1,0 +1,94 @@
+[
+  {
+    "source": "turbopack:///[project]/node_modules/react/cjs/react.production.js",
+    "bytes": 17217
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/utils.ts",
+    "bytes": 11624
+  },
+  {
+    "source": "turbopack:///[project]/pages/resources.js",
+    "bytes": 7175
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/react-dom/cjs/react-dom.production.js",
+    "bytes": 6655
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/head.tsx",
+    "bytes": 5199
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/image-config.ts",
+    "bytes": 4861
+  },
+  {
+    "source": "turbopack:///[project]/components/SEO.js",
+    "bytes": 3369
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/dist/compiled/process/browser.js",
+    "bytes": 2442
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/side-effect.tsx",
+    "bytes": 2262
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/react-dom/index.js",
+    "bytes": 1359
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/@swc/helpers/cjs/_interop_require_wildcard.cjs",
+    "bytes": 1298
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/react/cjs/react-jsx-runtime.production.js",
+    "bytes": 976
+  },
+  {
+    "source": "turbopack:///[next]/entry/page-loader.ts",
+    "bytes": 580
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/head-manager-context.shared-runtime.ts",
+    "bytes": 461
+  },
+  {
+    "source": "turbopack:///[project]/components/icons/FiCalendar.js",
+    "bytes": 410
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/image-config-context.shared-runtime.ts",
+    "bytes": 338
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/utils/warn-once.ts",
+    "bytes": 256
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/router-context.shared-runtime.ts",
+    "bytes": 245
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/react/jsx-runtime.js",
+    "bytes": 210
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/build/polyfills/process.ts",
+    "bytes": 196
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/react/index.js",
+    "bytes": 186
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/@swc/helpers/cjs/_interop_require_default.cjs",
+    "bytes": 155
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/head.js",
+    "bytes": 51
+  }
+]

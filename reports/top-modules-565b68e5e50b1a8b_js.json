@@ -1,0 +1,22 @@
+[
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/utils.ts",
+    "bytes": 11624
+  },
+  {
+    "source": "turbopack:///[project]/pages/index.js",
+    "bytes": 10005
+  },
+  {
+    "source": "turbopack:///[project]/components/hyperspeedPresets.js",
+    "bytes": 6206
+  },
+  {
+    "source": "turbopack:///[project]/components/HyperspeedLoader.js",
+    "bytes": 1823
+  },
+  {
+    "source": "turbopack:///[next]/entry/page-loader.ts",
+    "bytes": 571
+  }
+]

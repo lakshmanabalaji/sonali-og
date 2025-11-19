@@ -1,5 +1,6 @@
 import React from "react";
 import SEO from "../components/SEO";
+import Image from 'next/image'
 // hero background reverted to plain <img> to restore original CSS behavior
 
 const OurProducts = () => {
@@ -23,9 +24,11 @@ const OurProducts = () => {
         }}
       />
       <div className="products-hero">
-  {/* hero background uses optimized WebP now */}
-  <img src="/images/optimized/wire1-opt.webp" alt="Copper Wires" className="hero-wire-image" aria-hidden="true" />
-        <div className="container hero-content">
+      {/* hero background uses optimized WebP now (next/image for optimization + priority) */}
+      <div style={{ position: 'absolute', inset: 0, zIndex: 0 }} aria-hidden="true">
+        <Image src="/images/optimized/wire1-opt.webp" alt="" fill priority style={{ objectFit: 'cover', transform: 'scaleX(-1)' }} />
+      </div>
+            <div className="container hero-content">
           <p className="breadcrumb1">Home &gt; Our Products</p>
           <div className="hero-headline-group">
             <h1 className="hero-heading">Smarter</h1>
@@ -52,7 +55,9 @@ const OurProducts = () => {
           <div className="row g-4 mt-3">
             <div className="col-md-3 col-sm-6">
               <div className="products-card card-bg1">
-                <img src="/images/wire2.png" alt="Three Core Flat Cables" />
+                <div style={{ position: 'relative', width: 300, height: 200 }}>
+                  <Image src="/images/wire2.png" alt="Three Core Flat Cables" fill style={{objectFit: 'contain'}} />
+                </div>
                 <h5>Three Core Flat Cables</h5>
                 <p>
                   Trusted by farmers, these durable flat cables deliver
@@ -62,7 +67,9 @@ const OurProducts = () => {
             </div>
             <div className="col-md-3 col-sm-6">
               <div className="products-card card-bg2">
-                <img src="/images/wire3.png" alt="Housing Wires" />
+                <div style={{ position: 'relative', width: 300, height: 200 }}>
+                  <Image src="/images/wire3.png" alt="Housing Wires" fill style={{objectFit: 'contain'}} />
+                </div>
                 <h5>Housing Wires</h5>
                 <p>
                   Designed for residential use, these wires ensure safety and
@@ -72,7 +79,9 @@ const OurProducts = () => {
             </div>
             <div className="col-md-3 col-sm-6">
               <div className="products-card card-bg3">
-                <img src="/images/wire4.png" alt="Submersible Winding Wires" />
+                <div style={{ position: 'relative', width: 300, height: 200 }}>
+                  <Image src="/images/wire4.png" alt="Submersible Winding Wires" fill style={{objectFit: 'contain'}} />
+                </div>
                 <h5>Submersible Winding Wires</h5>
                 <p>
                   Built with advanced insulation for high durability and
@@ -82,7 +91,9 @@ const OurProducts = () => {
             </div>
             <div className="col-md-3 col-sm-6">
               <div className="products-card card-bg4">
-                <img src="/images/wire5.png" alt="Industrial Cables" />
+                <div style={{ position: 'relative', width: 300, height: 200 }}>
+                  <Image src="/images/wire5.png" alt="Industrial Cables" fill style={{objectFit: 'contain'}} />
+                </div>
                 <h5>Industrial Cables</h5>
                 <p>
                   High-performance cables used across industrial applications

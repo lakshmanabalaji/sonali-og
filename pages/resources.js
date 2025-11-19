@@ -1,6 +1,6 @@
 import React from "react";
 import SEO from "../components/SEO";
-import { FiCalendar } from "react-icons/fi"; // ✅ calendar icon
+import FiCalendar from '../components/icons/FiCalendar';
 
 const certificates = [
     { img: "/images/cert1.jpg", title: "BIS Certification" },

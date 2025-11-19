@@ -26,17 +26,9 @@ function MyApp({ Component, pageProps }) {
         <link rel="icon" href="/favicon.ico" />
         <title>Sonali Wires</title>
         
-        {/* Bootstrap CSS */}
-        <link
-          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-          rel="stylesheet"
-        />
+        {/* Bootstrap CSS moved to pages/_document.js per Next.js recommendation */}
         
-        {/* Font Awesome */}
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        />
+        {/* Font Awesome removed: switching to self-hosted fonts */}
       </Head>
 
       {/* Bootstrap JS */}

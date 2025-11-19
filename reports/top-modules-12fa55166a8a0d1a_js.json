@@ -1,0 +1,14 @@
+[
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/utils.ts",
+    "bytes": 11624
+  },
+  {
+    "source": "turbopack:///[project]/pages/products.js",
+    "bytes": 7602
+  },
+  {
+    "source": "turbopack:///[next]/entry/page-loader.ts",
+    "bytes": 579
+  }
+]

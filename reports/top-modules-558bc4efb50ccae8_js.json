@@ -1,0 +1,258 @@
+[
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/router/router.ts",
+    "bytes": 77689
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/client/route-loader.ts",
+    "bytes": 13804
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/router/utils/route-regex.ts",
+    "bytes": 12725
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/client/script.tsx",
+    "bytes": 11854
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/router/utils/get-dynamic-param.ts",
+    "bytes": 8649
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/router/utils/sorted-routes.ts",
+    "bytes": 8625
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/lib/constants.ts",
+    "bytes": 8518
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/dist/compiled/path-to-regexp/index.js",
+    "bytes": 7310
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/client/router.ts",
+    "bytes": 5291
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/lib/route-pattern-normalizer.ts",
+    "bytes": 5270
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/client/resolve-href.ts",
+    "bytes": 4952
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/router/utils/route-match-utils.ts",
+    "bytes": 4414
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/router/utils/interception-routes.ts",
+    "bytes": 3485
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/router/utils/format-url.ts",
+    "bytes": 3249
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/router/utils/get-next-pathname-info.ts",
+    "bytes": 3163
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/bloom-filter.ts",
+    "bytes": 2680
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/router/utils/get-segment-param.tsx",
+    "bytes": 2631
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/segment.ts",
+    "bytes": 2537
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/router/utils/interpolate-as.ts",
+    "bytes": 2212
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/mitt.ts",
+    "bytes": 2042
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/i18n/normalize-locale-path.ts",
+    "bytes": 2011
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/lib/is-error.ts",
+    "bytes": 1934
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/router/utils/disable-smooth-scroll.ts",
+    "bytes": 1870
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/router/utils/parse-relative-url.ts",
+    "bytes": 1828
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/router/utils/app-paths.ts",
+    "bytes": 1743
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/client/set-attributes-from-props.ts",
+    "bytes": 1739
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/router/utils/querystring.ts",
+    "bytes": 1529
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/router/utils/route-matcher.ts",
+    "bytes": 1377
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/client/trusted-types.ts",
+    "bytes": 1265
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/router/utils/remove-path-prefix.ts",
+    "bytes": 1258
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/client/with-router.tsx",
+    "bytes": 1185
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/router/utils/is-bot.ts",
+    "bytes": 1107
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/router/utils/format-next-pathname-info.ts",
+    "bytes": 1067
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/router/utils/add-locale.ts",
+    "bytes": 1004
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/router/utils/compare-states.ts",
+    "bytes": 886
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/router/utils/html-bots.ts",
+    "bytes": 872
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/client/normalize-trailing-slash.ts",
+    "bytes": 836
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/router/utils/is-dynamic.ts",
+    "bytes": 822
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/router/utils/parse-path.ts",
+    "bytes": 758
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/router/utils/parse-loader-tree.ts",
+    "bytes": 710
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/is-plain-object.ts",
+    "bytes": 674
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/router/utils/is-local-url.ts",
+    "bytes": 662
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/client/request-idle-callback.ts",
+    "bytes": 630
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/page-path/denormalize-page-path.ts",
+    "bytes": 618
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/client/remove-locale.ts",
+    "bytes": 563
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/router/utils/path-has-prefix.ts",
+    "bytes": 553
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/client/remove-base-path.ts",
+    "bytes": 478
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/client/add-locale.ts",
+    "bytes": 469
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/router/utils/add-path-suffix.ts",
+    "bytes": 449
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/client/add-base-path.ts",
+    "bytes": 445
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/escape-regexp.ts",
+    "bytes": 427
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/router/utils/get-asset-path-from-route.ts",
+    "bytes": 410
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/router/utils/add-path-prefix.ts",
+    "bytes": 391
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/client/detect-domain-locale.ts",
+    "bytes": 360
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/router/utils/omit.ts",
+    "bytes": 323
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/router/utils/remove-trailing-slash.ts",
+    "bytes": 287
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/invariant-error.ts",
+    "bytes": 268
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/page-path/ensure-leading-slash.ts",
+    "bytes": 262
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/page-path/normalize-path-sep.ts",
+    "bytes": 257
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/client/has-base-path.ts",
+    "bytes": 241
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/build/deployment-id.ts",
+    "bytes": 172
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/encode-uri-path.ts",
+    "bytes": 132
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/router/utils/index.ts",
+    "bytes": 119
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/lib/is-api-route.ts",
+    "bytes": 112
+  }
+]

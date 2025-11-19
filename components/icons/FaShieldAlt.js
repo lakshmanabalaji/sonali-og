@@ -1,0 +1,18 @@
+import React from 'react';
+
+export default function FaShieldAlt({ className = '', size = 24, ...props }) {
+  return (
+    <svg
+      className={className}
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+      {...props}
+    >
+      <path d="M12 2l7 3v5c0 5-3.8 9.7-7 11-3.2-1.3-7-6-7-11V5l7-3z" fill="currentColor" />
+    </svg>
+  );
+}

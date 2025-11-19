@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaWhatsapp, FaYoutube, FaFacebook, FaLinkedin } from 'react-icons/fa';
 import Link from "next/link";
 import { useRouter } from "next/router";
 
@@ -193,7 +195,7 @@ const Layout = ({ children }) => {
         {/* Top section */}
         <div className="container mt-5 mb-2 power-your">
           <div className="row align-items-left">
-            <div className="col-lg-6">
+            <div className="col-lg-6" style={{ paddingLeft: '0px', paddingRight: '0px' }}>
               <h2 className="display-4 mb-4">
                 Power Your Future with <br />
                 <span className="fw-bold foot-subtitle">Sonali Wires</span>
@@ -246,20 +248,21 @@ const Layout = ({ children }) => {
                 industries & agriculture.
               </p>
               <div className="d-flex gap-3 fs-4 icon">
-                <a href="https://wa.me/yourwhatsappnumber" className="text-light">
-                  <i className="fab fa-whatsapp"></i>
+                <a href="https://wa.me/yourwhatsappnumber" className="text-light" aria-label="WhatsApp">
+                  <span className="footer-icon-bg"><FaWhatsapp className="footer-icon-bg-inner" /></span>
                 </a>
-                <a href="https://youtube.com/yourchannel" className="text-light">
-                  <i className="fab fa-youtube"></i>
+                <a href="https://youtube.com/yourchannel" className="text-light" aria-label="YouTube">
+                  <span className="footer-icon-bg"><FaYoutube className="footer-icon-bg-inner" /></span>
                 </a>
-                <a href="https://facebook.com/yourpage" className="text-light">
-                  <i className="fab fa-facebook"></i>
+                <a href="https://facebook.com/yourpage" className="text-light" aria-label="Facebook">
+                  <span className="footer-icon-bg"><FaFacebook className="footer-icon-bg-inner" /></span>
                 </a>
                 <a
                   href="https://linkedin.com/company/yourcompany"
                   className="text-light"
+                  aria-label="LinkedIn"
                 >
-                  <i className="fab fa-linkedin"></i>
+                  <span className="footer-icon-bg"><FaLinkedin className="footer-icon-bg-inner" /></span>
                 </a>
               </div>
             </div>
@@ -325,20 +328,20 @@ const Layout = ({ children }) => {
             <div className="col-lg-3">
               <h4 className="h5 mb-3">Contact Us</h4>
               <ul className="list-unstyled footer-contact-list">
-                <li>
-                  <i className="fas fa-phone"></i>
+                <li style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                  <span className="footer-icon-bg contact-icon"><FaPhoneAlt aria-label="Phone" className="contact-icon-inner" /></span>
                   <a href="tel:+918344422211" className="contatctus">
                     +91 83444 22211
                   </a>
                 </li>
-                <li>
-                  <i className="fas fa-envelope"></i>
+                <li style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                  <span className="footer-icon-bg contact-icon"><FaEnvelope aria-label="Email" className="contact-icon-inner" /></span>
                   <a href="mailto:info@sonaligroup.com" className="mailto">
                     info@sonaligroup.com
                   </a>
                 </li>
-                <li>
-                  <i className="fas fa-map-marker-alt"></i>
+                <li style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                  <span className="footer-icon-bg contact-icon"><FaMapMarkerAlt aria-label="Address" className="contact-icon-inner" /></span>
                   <span>
                     Sonali Group, G-6/30, Jain Plaza,
                     <br />

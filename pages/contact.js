@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import SEO from "../components/SEO";
+import Image from 'next/image'
 
 const Contact = () => {
   const [activeTab, setActiveTab] = useState("general");
@@ -15,7 +16,9 @@ const Contact = () => {
           HERO SECTION
       =========================== */}
       <div className="contact-hero">
-        <img src="/images/contact.jpg" alt="Contact Background" className="contact-bg" />
+        <div style={{ position: 'absolute', inset: 0, zIndex: 0 }} aria-hidden="true">
+          <Image src="/images/contact.jpg" alt="" fill priority style={{ objectFit: 'cover' }} />
+        </div>
         <div className="contact-overlay"></div>
 
         <div className="container contact-content">
@@ -228,14 +231,18 @@ const Contact = () => {
           <div className="map-content">
             {/* Left: Map */}
             <div className="map-left">
-              <img src="/images/map.png" alt="Sonali Wires Map" className="map-image" />
+              <div style={{ position: 'relative', width: 800, height: 500 }}>
+                <Image src="/images/map.png" alt="Sonali Wires Map" fill style={{objectFit: 'contain'}} />
+              </div>
             </div>
 
             {/* Right: Details */}
             <div className="map-right">
               <ul className="map-details">
                 <li>
-                  <img src="/images/location_icon.png" className="map-png-icon" alt="Location" />
+                  <div style={{ position: 'relative', width: 24, height: 24 }}>
+                    <Image src="/images/location_icon.png" className="map-png-icon" alt="Location" fill style={{objectFit: 'contain'}} />
+                  </div>
                   <span>
                     G-6/30, Jain Plaza, Oppanakara Street,
                     <br />
@@ -244,14 +251,18 @@ const Contact = () => {
                 </li>
 
                 <li>
-                  <img src="/images/contact_icon.png" className="map-png-icon" alt="Phone" />
+                  <div style={{ position: 'relative', width: 24, height: 24 }}>
+                    <Image src="/images/contact_icon.png" className="map-png-icon" alt="Phone" fill style={{objectFit: 'contain'}} />
+                  </div>
                   <a href="tel:+918344422211" className="map-link">
                     +91 83444 22211
                   </a>
                 </li>
 
                 <li>
-                  <img src="/images/mail_icon.png" className="map-png-icon" alt="Email" />
+                  <div style={{ position: 'relative', width: 24, height: 24 }}>
+                    <Image src="/images/mail_icon.png" className="map-png-icon" alt="Email" fill style={{objectFit: 'contain'}} />
+                  </div>
                   <a href="mailto:info@sonaligroup.com" className="map-link">
                     info@sonaligroup.com
                   </a>

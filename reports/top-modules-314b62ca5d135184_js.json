@@ -1,0 +1,18 @@
+[
+  {
+    "source": "turbopack:///[turbopack]/shared/runtime-utils.ts",
+    "bytes": 19915
+  },
+  {
+    "source": "turbopack:///[turbopack]/browser/runtime/base/runtime-base.ts",
+    "bytes": 12716
+  },
+  {
+    "source": "turbopack:///[turbopack]/browser/runtime/dom/runtime-backend-dom.ts",
+    "bytes": 7180
+  },
+  {
+    "source": "turbopack:///[turbopack]/browser/runtime/base/build-base.ts",
+    "bytes": 2865
+  }
+]

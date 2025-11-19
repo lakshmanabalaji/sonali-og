@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { FaWhatsapp } from 'react-icons/fa';
 import { hyperspeedPresets } from "../components/hyperspeedPresets";
 import HyperspeedLoader from "../components/HyperspeedLoader";
 import SEO from "../components/SEO";
+import Image from 'next/image'
 // background hero uses a normal <img> to preserve original layout
 
 const Home = () => {
@@ -25,13 +27,16 @@ const Home = () => {
       <div className="homeContainer">
   <HyperspeedLoader effectOptions={hyperspeedPresets.one} />
 
-        {/* background image (hero) - reverted to original <img> to preserve layout */}
-        <img
-          src="/images/optimized/Layer1-opt.webp"
-          alt=""
-          aria-hidden="true"
-          style={{ position: 'absolute', inset: 0, zIndex: -1, width: '100%', height: '100%', objectFit: 'cover' }}
-        />
+        {/* background image (hero) - use next/image in a positioned wrapper to preserve layout and improve LCP */}
+        <div style={{ position: 'absolute', inset: 0, zIndex: -1 }} aria-hidden="true">
+          <Image
+            src="/images/optimized/Layer1-opt.webp"
+            alt=""
+            fill
+            priority
+            style={{ objectFit: 'cover' }}
+          />
+        </div>
 
         <div className="overlay">
           <h1>
@@ -83,7 +88,8 @@ const Home = () => {
             onClick={() => setShowChat(true)}
             aria-label="Chat with us on WhatsApp"
           >
-            <i className="fab fa-whatsapp fa-2x"></i>
+            {/* Use react-icons for WhatsApp icon for better visibility and bundle consistency */}
+            <FaWhatsapp style={{ fontSize: 24, verticalAlign: 'middle' }} />
           </button>
         </div>
       </div>
@@ -173,17 +179,41 @@ const Home = () => {
 
         <div className="productGrid">
           <div className="productCard rotateLeft">
-            <img src="/images/freepik_br_38c274bd-e1a3-4785-bc3c-0e1530f57b34 1.png" alt="Submersible Winding Wires" className="firstImage" />
+            <div style={{ position: 'relative', width: 300, height: 200 }}>
+              <Image
+                src="/images/freepik_br_38c274bd-e1a3-4785-bc3c-0e1530f57b34 1.png"
+                alt="Submersible Winding Wires"
+                fill
+                style={{ objectFit: 'contain', transform: 'rotate(30deg)' }}
+                priority
+              />
+            </div>
             <h3>Submersing Wires (FR, FRLS, HFFR)</h3>
           </div>
 
           <div className="productCard noRotate">
-            <img src="/images/freepik_br_664f631b-f4ab-478d-babc-d010187463a8 1.png" alt="Three Core Flat Cables" className="secondImage" />
+            <div style={{ position: 'relative', width: 300, height: 200 }}>
+              <Image
+                src="/images/freepik_br_664f631b-f4ab-478d-babc-d010187463a8 1.png"
+                alt="Three Core Flat Cables"
+                fill
+                style={{ objectFit: 'contain' }}
+                priority
+              />
+            </div>
             <h3>Three Core Flat Cables</h3>
           </div>
 
           <div className="productCard rotateRight">
-            <img src="/images/freepik_br_a4162ba9-96f9-4be0-883f-b331f9bd20d1 1.png" alt="Wiring Wires (FR, FRLS, HFFR)" className="thirdImage" />
+            <div style={{ position: 'relative', width: 300, height: 200 }}>
+              <Image
+                src="/images/freepik_br_a4162ba9-96f9-4be0-883f-b331f9bd20d1 1.png"
+                alt="Wiring Wires (FR, FRLS, HFFR)"
+                fill
+                style={{ objectFit: 'contain', transform: 'rotate(360deg)' }}
+                priority
+              />
+            </div>
             <h3 style={{marginTop: '50px'}}>Submersible Winding Wires</h3>
           </div>
         </div>
@@ -205,10 +235,12 @@ const Home = () => {
           <button className="seeMoreBtn">See More News →</button>
         </div>
 
-        <div className="newsGrid">
+          <div className="newsGrid">
           {/* News Card 1 */}
           <div className="newsCard">
-            <img src="/images/wires1-news.png" alt="Expo Participation" className="newsImg firstImg" />
+            <div style={{ position: 'relative', width: 420, height: 240 }}>
+              <Image src="/images/wires1-news.png" alt="Expo Participation" fill style={{objectFit: 'cover'}} />
+            </div>
             <p className="newsDate">July 2, 2025</p>
             <h3>Participation in India Electrical Expo 2025</h3>
             <p className="newsDesc">
@@ -222,7 +254,9 @@ const Home = () => {
 
           {/* News Card 2 */}
           <div className="newsCard">
-            <img src="/images/wires-news.png" alt="HFFR Wires Launch" className="newsImg secondImg" />
+            <div style={{ position: 'relative', width: 420, height: 240 }}>
+              <Image src="/images/wires-news.png" alt="HFFR Wires Launch" fill style={{objectFit: 'cover'}} />
+            </div>
             <p className="newsDate">July 2, 2025</p>
             <h3>Launch of HFFR housing wires for safer homes</h3>
             <p className="newsDesc">

@@ -1,0 +1,10 @@
+[
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/server/request-meta.ts",
+    "bytes": 9196
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/pages/_error.tsx",
+    "bytes": 4276
+  }
+]

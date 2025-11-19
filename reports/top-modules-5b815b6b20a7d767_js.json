@@ -1,0 +1,18 @@
+[
+  {
+    "source": "turbopack:///[project]/node_modules/three/build/three.core.js",
+    "bytes": 1403455
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/postprocessing/build/index.js",
+    "bytes": 630095
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/three/build/three.module.js",
+    "bytes": 603113
+  },
+  {
+    "source": "turbopack:///[project]/components/Hyperspeed.impl.js",
+    "bytes": 38395
+  }
+]

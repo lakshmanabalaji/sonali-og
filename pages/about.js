@@ -2,8 +2,12 @@ import React from "react";
 import { useState, useMemo } from "react";
 import SEO from "../components/SEO";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import { FaShieldAlt, FaCogs, FaLightbulb, FaLeaf, FaHeart } from "react-icons/fa";
-import { FaTrophy } from "react-icons/fa";
+import FaShieldAlt from '../components/icons/FaShieldAlt';
+import FaCogs from '../components/icons/FaCogs';
+import FaLightbulb from '../components/icons/FaLightbulb';
+import FaLeaf from '../components/icons/FaLeaf';
+import FaHeart from '../components/icons/FaHeart';
+import FaTrophy from '../components/icons/FaTrophy';
 import { MILESTONES } from "../components/History/timeline_years.js";
 
 const About = () => {

@@ -1,8 +1,10 @@
 import React from "react";
 import SEO from "../components/SEO";
 // revert hero background to original <img> so CSS (.careers-bg) applies unchanged
-import { FiMapPin } from "react-icons/fi";
-import { BiBriefcase } from "react-icons/bi";
+import Image from 'next/image'
+import FiMapPin from '../components/icons/FiMapPin';
+import BiBriefcase from '../components/icons/BiBriefcase';
+import { FaRegSmile } from 'react-icons/fa';
 
 const Careers = () => {
   const jobOpenings = [
@@ -83,8 +85,17 @@ const Careers = () => {
       />
       {/* ===== HERO SECTION ===== */}
       <div className="careers-hero">
-  {/* revert to original background image element so .careers-bg CSS controls object-fit/position */}
-  <img src="/images/optimized/bg_first_div-opt.webp" alt="Careers Hero" className="careers-bg" aria-hidden="true" />
+        {/* Use next/image with a positioned wrapper so CSS can still target .careers-bg for object-fit/positioning. */}
+        <div className="careers-bg-wrapper" style={{position: 'absolute', inset: 0, zIndex: 0}} aria-hidden="true">
+          <Image
+            src="/images/optimized/bg_first_div-opt.webp"
+            alt=""
+            className="careers-bg"
+            fill
+            priority
+            aria-hidden="true"
+          />
+        </div>
         <div className="careers-overlay"></div>
 
         <div className="container careers-content">
@@ -128,7 +139,9 @@ const Careers = () => {
 
             <div className="why-right">
               <div className="retention-box">
-                <img src="/images/star.png" alt="Star Shines at Night" className="star" />
+                <div style={{ position: 'relative', width: 48, height: 48 }}>
+                  <Image src="/images/star.png" alt="Star Shines at Night" fill style={{objectFit: 'contain'}} />
+                </div>
                 <h3>95%</h3>
                 <p>
                   Employee Retention in <br />
@@ -140,13 +153,22 @@ const Careers = () => {
 
           {/* Images Row */}
           <div className="why-images">
-            <img src="/images/career_1.jpg" alt="Career 1" />
-            <img src="/images/career_2.jpg" alt="Career 2" />
-            <img src="/images/career_3.jpg" alt="Career 3" />
-            <img src="/images/career_4.png" alt="Career 4" />
+            <div style={{ position: 'relative', width: 360, height: 240 }}>
+              <Image src="/images/career_1.jpg" alt="Career 1" fill style={{objectFit: 'cover'}} />
+            </div>
+            <div style={{ position: 'relative', width: 360, height: 240 }}>
+              <Image src="/images/career_2.jpg" alt="Career 2" fill style={{objectFit: 'cover'}} />
+            </div>
+            <div style={{ position: 'relative', width: 360, height: 240 }}>
+              <Image src="/images/career_3.jpg" alt="Career 3" fill style={{objectFit: 'cover'}} />
+            </div>
+            <div style={{ position: 'relative', width: 360, height: 240 }}>
+              <Image src="/images/career_4.png" alt="Career 4" fill style={{objectFit: 'cover'}} />
+            </div>
           </div>
         </div>
       </div>
+
 
       {/* ===== JOB OPENINGS SECTION ===== */}
       <div className="job-section">
@@ -221,12 +243,10 @@ const Careers = () => {
 
           <div className="promise-grid">
             {promises.map((item, index) => (
-              <div className="promise-card" key={index}>
-                <img
-                  src={item.icon}
-                  alt={item.text}
-                  className="promise-icon"
-                />
+                <div className="promise-card" key={index}>
+                <div style={{ position: 'relative', width: 72, height: 72 }}>
+                  <Image src={item.icon} alt={item.text} fill style={{objectFit: 'contain'}} />
+                </div>
                 <p className="promise-text">{item.text}</p>
               </div>
             ))}

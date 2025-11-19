@@ -1,0 +1,22 @@
+[
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/utils.ts",
+    "bytes": 11624
+  },
+  {
+    "source": "turbopack:///[project]/pages/careers.js",
+    "bytes": 9168
+  },
+  {
+    "source": "turbopack:///[next]/entry/page-loader.ts",
+    "bytes": 578
+  },
+  {
+    "source": "turbopack:///[project]/components/icons/FiMapPin.js",
+    "bytes": 481
+  },
+  {
+    "source": "turbopack:///[project]/components/icons/BiBriefcase.js",
+    "bytes": 441
+  }
+]

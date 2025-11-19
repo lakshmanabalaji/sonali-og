@@ -1,0 +1,114 @@
+[
+  {
+    "source": "turbopack:///[project]/node_modules/react-dom/cjs/react-dom-client.production.js",
+    "bytes": 536016
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/client/index.tsx",
+    "bytes": 31206
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/scheduler/cjs/scheduler.production.js",
+    "bytes": 10181
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/constants.ts",
+    "bytes": 7078
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/client/page-loader.ts",
+    "bytes": 7034
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/client/head-manager.ts",
+    "bytes": 4725
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/router/adapters.tsx",
+    "bytes": 4107
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/app-router-context.shared-runtime.ts",
+    "bytes": 2186
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/client/route-announcer.tsx",
+    "bytes": 1998
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/hooks-client-context.shared-runtime.ts",
+    "bytes": 1826
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/client/tracing/tracer.ts",
+    "bytes": 1620
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/client/components/http-access-fallback/http-access-fallback.ts",
+    "bytes": 1511
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/dist/build/polyfills/polyfill-module.js",
+    "bytes": 1380
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/react-dom/client.js",
+    "bytes": 1373
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/client/next-turbopack.ts",
+    "bytes": 1260
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/client/dev/fouc.ts",
+    "bytes": 1207
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/lib/require-instrumentation-client.ts",
+    "bytes": 1192
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/client/react-client-callbacks/on-recoverable-error.ts",
+    "bytes": 1172
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/client/components/redirect-error.ts",
+    "bytes": 1164
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/lazy-dynamic/bailout-to-csr.ts",
+    "bytes": 786
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/client/portal/index.tsx",
+    "bytes": 569
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/client/components/is-next-router-error.ts",
+    "bytes": 546
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/modern-browserslist-target.js",
+    "bytes": 506
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/client/react-client-callbacks/report-global-error.ts",
+    "bytes": 321
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/entry-constants.ts",
+    "bytes": 294
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/shared/lib/router/utils/as-path-to-search-params.ts",
+    "bytes": 231
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/scheduler/index.js",
+    "bytes": 194
+  },
+  {
+    "source": "turbopack:///[project]/node_modules/next/src/client/components/redirect-status-code.ts",
+    "bytes": 107
+  }
+]
