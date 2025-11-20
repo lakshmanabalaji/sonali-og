@@ -31,7 +31,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding-left: 140px;
+  padding-left: 150px;
   padding-right: 40px;
   padding-top: 150px;
   padding-bottom: 70px;
@@ -316,7 +316,7 @@ h1 span::selection { background: transparent; color: inherit; }
   justify-content: space-between;
   align-items: flex-start;
   
-  padding: 100px 70px;
+  padding: 100px 150px;
   background-color: #f5f7fa;
   color: #162C47;
   gap: 10px;
@@ -478,7 +478,7 @@ h1 span::selection { background: transparent; color: inherit; }
 .applicationsSection {
   background-color: #0e2439;
   color: #fff;
-  padding: 80px 70px;
+  padding: 100px 150px;
   text-align: left;
 }
 
@@ -590,7 +590,7 @@ h1 span::selection { background: transparent; color: inherit; }
 .featuredProducts {
   color: #162C47;
   text-align: center;
-  padding: 80px 70px;
+  padding: 100px 150px;
   position: relative;
 }
 
@@ -965,3 +965,4 @@ h1 span::selection { background: transparent; color: inherit; }
     font-size: 0.95rem;
   }
 }
+
