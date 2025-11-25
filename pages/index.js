@@ -5,10 +5,17 @@ import { hyperspeedPresets } from "../components/hyperspeedPresets";
 import HyperspeedLoader from "../components/HyperspeedLoader";
 import SEO from "../components/SEO";
 import Image from 'next/image'
+import { getHomeContent, getGlobalSettings } from '../lib/cms';
+import { STRAPI_URL } from '../lib/strapi';
 // background hero uses a normal <img> to preserve original layout
 
-const Home = () => {
+const Home = ({ home, globalSetting }) => {
   const [showChat, setShowChat] = useState(false);
+
+  const heroAttrs = home?.data?.attributes || {};
+  const heroUrl = heroAttrs.hero_image?.data?.attributes?.url
+    ? `${STRAPI_URL}${heroAttrs.hero_image.data.attributes.url}`
+    : '/images/optimized/Layer1-opt.webp';
 
   return (
     <>
@@ -31,8 +38,8 @@ const Home = () => {
         {/* background image (hero) - use next/image in a positioned wrapper to preserve layout and improve LCP */}
         <div style={{ position: 'absolute', inset: 0, zIndex: -1 }} aria-hidden="true">
           <Image
-            src="/images/optimized/Layer1-opt.webp"
-            alt=""
+            src={heroUrl}
+            alt={heroAttrs.hero_title || ''}
             fill
             priority
             style={{ objectFit: 'cover' }}
@@ -41,10 +48,14 @@ const Home = () => {
 
         <div className="overlay">
           <h1>
-            Sonali <span className="over">wires</span>
+            {heroAttrs.hero_title ? (
+              heroAttrs.hero_title
+            ) : (
+              <>Sonali <span className="over">wires</span></>
+            )}
           </h1>
-           
-          <h3>Stronger trust.</h3>
+          
+          <h3>{heroAttrs.hero_subtitle || 'Stronger trust.'}</h3>
           <p>
             Safe, reliable, and innovative copper wiring solutions powering homes,
             industries & agriculture.
@@ -180,7 +191,7 @@ const Home = () => {
 
         <div className="productGrid">
           <div className="productCard rotateLeft">
-            <div style={{ position: 'relative', width: 300, height: 200 }}>
+            <div style={{ position: 'relative', width: '100%', maxWidth: '200px', height: '160px', margin: '0 auto' }}>
               <Image
                 src="/images/freepik_br_38c274bd-e1a3-4785-bc3c-0e1530f57b34 1.png"
                 alt="Submersible Winding Wires"
@@ -193,7 +204,7 @@ const Home = () => {
           </div>
 
           <div className="productCard noRotate">
-            <div style={{ position: 'relative', width: 300, height: 200 }}>
+            <div style={{ position: 'relative', width: '100%', maxWidth: '200px', height: '160px', margin: '0 auto' }}>
               <Image
                 src="/images/freepik_br_664f631b-f4ab-478d-babc-d010187463a8 1.png"
                 alt="Three Core Flat Cables"
@@ -206,7 +217,7 @@ const Home = () => {
           </div>
 
           <div className="productCard rotateRight">
-            <div style={{ position: 'relative', width: 300, height: 200 }}>
+            <div style={{ position: 'relative', width: '100%', maxWidth: '200px', height: '160px', margin: '0 auto' }}>
               <Image
                 src="/images/freepik_br_a4162ba9-96f9-4be0-883f-b331f9bd20d1 1.png"
                 alt="Wiring Wires (FR, FRLS, HFFR)"
@@ -215,7 +226,7 @@ const Home = () => {
                 priority
               />
             </div>
-            <h3 style={{marginTop: '50px'}}>Submersible Winding Wires</h3>
+            <h3 style={{marginTop: '20px'}}>Submersible Winding Wires</h3>
           </div>
         </div>
         <div style={{ textAlign: 'center', marginTop: '40px' }}>
@@ -289,5 +300,19 @@ const Home = () => {
     </>
   );
 };
+
+export async function getStaticProps() {
+  try {
+    const home = await getHomeContent();
+    const globalSetting = await getGlobalSettings();
+    return {
+      props: { home, globalSetting },
+      revalidate: 10,
+    };
+  } catch (err) {
+    console.error('getStaticProps error:', err);
+    return { props: { home: null, globalSetting: null }, revalidate: 10 };
+  }
+}
 
 export default Home;

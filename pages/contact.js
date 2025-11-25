@@ -1,9 +1,14 @@
 import React, { useState } from "react";
 import SEO from "../components/SEO";
 import Image from 'next/image'
+import { getGlobalSettings } from '../lib/cms';
+import { getAboutContent } from '../lib/cms';
+import { getHomeContent } from '../lib/cms';
+import { STRAPI_URL } from '../lib/strapi';
 
-const Contact = () => {
+const Contact = ({ contact = null, globalSetting = null }) => {
   const [activeTab, setActiveTab] = useState("general");
+  const contactAttrs = contact?.data?.attributes || {};
 
   return (
     <>
@@ -231,7 +236,7 @@ const Contact = () => {
           <div className="map-content">
             {/* Left: Map */}
             <div className="map-left">
-              <div style={{ position: 'relative', width: 800, height: 500 }}>
+              <div style={{ position: 'relative', width: '100%', paddingBottom: '66.67%', height: 0 }}>
                 <Image src="/images/map.png" alt="Sonali Wires Map" fill style={{objectFit: 'contain'}} />
               </div>
             </div>
@@ -244,9 +249,7 @@ const Contact = () => {
                     <Image src="/images/location_icon.png" className="map-png-icon" alt="Location" fill style={{objectFit: 'contain'}} />
                   </div>
                   <span>
-                    G-6/30, Jain Plaza, Oppanakara Street,
-                    <br />
-                    Coimbatore, Tamil Nadu - 641001
+                    {contactAttrs.address || 'G-6/30, Jain Plaza, Oppanakara Street, Coimbatore, Tamil Nadu - 641001'}
                   </span>
                 </li>
 
@@ -254,8 +257,8 @@ const Contact = () => {
                   <div style={{ position: 'relative', width: 24, height: 24 }}>
                     <Image src="/images/contact_icon.png" className="map-png-icon" alt="Phone" fill style={{objectFit: 'contain'}} />
                   </div>
-                  <a href="tel:+918344422211" className="map-link">
-                    +91 83444 22211
+                  <a href={`tel:${contactAttrs.phone || '+918344422211'}`} className="map-link">
+                    {contactAttrs.phone || '+91 83444 22211'}
                   </a>
                 </li>
 
@@ -263,8 +266,8 @@ const Contact = () => {
                   <div style={{ position: 'relative', width: 24, height: 24 }}>
                     <Image src="/images/mail_icon.png" className="map-png-icon" alt="Email" fill style={{objectFit: 'contain'}} />
                   </div>
-                  <a href="mailto:info@sonaligroup.com" className="map-link">
-                    info@sonaligroup.com
+                  <a href={`mailto:${contactAttrs.email || 'info@sonaligroup.com'}`} className="map-link">
+                    {contactAttrs.email || 'info@sonaligroup.com'}
                   </a>
                 </li>
               </ul>
@@ -284,3 +287,16 @@ const Contact = () => {
 };
 
 export default Contact;
+
+export async function getStaticProps() {
+  try {
+    // Contact single type is available at /api/contact
+    const res = await fetch(`${process.env.STRAPI_URL || 'http://localhost:1337'}/api/contact?populate=*`);
+    const contact = await res.json();
+    const globalSetting = await getGlobalSettings();
+    return { props: { contact, globalSetting }, revalidate: 10 };
+  } catch (err) {
+    console.error('getStaticProps contact error:', err);
+    return { props: { contact: null, globalSetting: null }, revalidate: 10 };
+  }
+}

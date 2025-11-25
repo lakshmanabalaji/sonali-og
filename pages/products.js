@@ -1,9 +1,12 @@
 import React from "react";
 import SEO from "../components/SEO";
 import Image from 'next/image'
+import { getProducts, getCategories } from '../lib/cms';
+import withGlobalSettings from '../lib/withGlobalSettings';
+import { STRAPI_URL } from '../lib/strapi';
 // hero background reverted to plain <img> to restore original CSS behavior
 
-const OurProducts = () => {
+const OurProducts = ({ products = [], categories = [], globalSetting }) => {
   return (
     <>
       <SEO
@@ -53,54 +56,29 @@ const OurProducts = () => {
             and cables designed to meet diverse needs:
           </p>
           <div className="row g-4 mt-3">
-            <div className="col-md-3 col-sm-6">
-              <div className="products-card card-bg1">
-                <div style={{ position: 'relative', width: 300, height: 200 }}>
-                  <Image src="/images/wire2.png" alt="Three Core Flat Cables" fill style={{objectFit: 'contain'}} />
-                </div>
-                <h5>Three Core Flat Cables</h5>
-                <p>
-                  Trusted by farmers, these durable flat cables deliver
-                  consistent power to submersible pumps.
-                </p>
-              </div>
-            </div>
-            <div className="col-md-3 col-sm-6">
-              <div className="products-card card-bg2">
-                <div style={{ position: 'relative', width: 300, height: 200 }}>
-                  <Image src="/images/wire3.png" alt="Housing Wires" fill style={{objectFit: 'contain'}} />
-                </div>
-                <h5>Housing Wires</h5>
-                <p>
-                  Designed for residential use, these wires ensure safety and
-                  long-lasting performance in homes.
-                </p>
-              </div>
-            </div>
-            <div className="col-md-3 col-sm-6">
-              <div className="products-card card-bg3">
-                <div style={{ position: 'relative', width: 300, height: 200 }}>
-                  <Image src="/images/wire4.png" alt="Submersible Winding Wires" fill style={{objectFit: 'contain'}} />
-                </div>
-                <h5>Submersible Winding Wires</h5>
-                <p>
-                  Built with advanced insulation for high durability and
-                  reliability underwater.
-                </p>
-              </div>
-            </div>
-            <div className="col-md-3 col-sm-6">
-              <div className="products-card card-bg4">
-                <div style={{ position: 'relative', width: 300, height: 200 }}>
-                  <Image src="/images/wire5.png" alt="Industrial Cables" fill style={{objectFit: 'contain'}} />
-                </div>
-                <h5>Industrial Cables</h5>
-                <p>
-                  High-performance cables used across industrial applications
-                  requiring strength and flexibility.
-                </p>
-              </div>
-            </div>
+            {products.data && products.data.length > 0 ? (
+              products.data.map((p) => {
+                const attrs = p.attributes || {};
+                const imgUrl = attrs.gallery && attrs.gallery.data && attrs.gallery.data[0]
+                  ? `${STRAPI_URL}${attrs.gallery.data[0].attributes.url}`
+                  : '/images/wire2.png';
+                return (
+                  <div key={p.id} className="col-md-3 col-sm-6">
+                    <a href={`/products/${attrs.slug}`} className="text-decoration-none">
+                      <div className="products-card">
+                        <div style={{ position: 'relative', width: 300, height: 200 }}>
+                          <Image src={imgUrl} alt={attrs.product_name} fill style={{objectFit: 'contain'}} />
+                        </div>
+                        <h5>{attrs.product_name}</h5>
+                        <p>{(attrs.description || '').slice(0, 120)}...</p>
+                      </div>
+                    </a>
+                  </div>
+                );
+              })
+            ) : (
+              <p>No products available.</p>
+            )}
           </div>
         </div>
       </div>
@@ -163,3 +141,14 @@ const OurProducts = () => {
 };
 
 export default OurProducts;
+
+export const getStaticProps = withGlobalSettings(async () => {
+  try {
+    const products = await getProducts();
+    const categories = await getCategories();
+    return { props: { products, categories }, revalidate: 10 };
+  } catch (err) {
+    console.error('getStaticProps products error:', err);
+    return { props: { products: null, categories: null }, revalidate: 10 };
+  }
+});

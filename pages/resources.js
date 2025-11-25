@@ -1,6 +1,8 @@
 import React from "react";
 import SEO from "../components/SEO";
-import FiCalendar from '../components/icons/FiCalendar';
+import { FiCalendar } from 'react-icons/fi';
+import { getResources, getResourceBySlug, getGlobalSettings } from '../lib/cms';
+import { STRAPI_URL } from '../lib/strapi';
 
 const certificates = [
     { img: "/images/cert1.jpg", title: "BIS Certification" },
@@ -13,7 +15,7 @@ const certificates = [
     { img: "/images/cert8.jpg", title: "ISO 45001:2018" },
   ];
 
-const Resources = () => {
+const Resources = ({ resources = [], globalSetting }) => {
   return (
     <>
       <SEO
@@ -118,50 +120,19 @@ const Resources = () => {
           </div>
 
           <div className="updates-cards">
-            {/* Left Small Card */}
-            <div className="update-card small">
-              <img
-                src="/images/resources_news.jpg"
-                alt="Electrical Expo"
-                className="update-card-img small-img"
-              />
-              <p className="update-date">
-                <FiCalendar className="calendar-icon" /> July 2, 2025
-              </p>
-              <h3 className="update-title">
-                Participation in India Electrical Expo 2025
-              </h3>
-              <p className="update-desc">
-                Sonali Wires LLP showcased its latest product innovations and
-                manufacturing excellence at the India Electrical Expo 2025.
-              </p>
-              <a href="https://www.electricexpo.co.in/" className="update-link">
-                Read More →
-              </a>
-            </div>
-
-            {/* Right Large Card */}
-            <div className="update-card large">
-              <img
-                src="/images/resources_wire.jpg"
-                alt="HFFR Housing Wires"
-                className="update-card-img large-img"
-              />
-              <p className="update-date">
-                <FiCalendar className="calendar-icon" /> July 2, 2025
-              </p>
-              <h3 className="update-title">
-                Launch of HFFR housing wires for safer homes
-              </h3>
-              <p className="update-desc">
-                We are proud to introduce our new range of Halogen Free Flame
-                Retardant (HFFR) housing wires. Designed for modern households,
-                these wires emit minimal smoke and zero halogen.
-              </p>
-              <a href="https://www.electricexpo.co.in/" className="update-link">
-                Read More →
-              </a>
-            </div>
+            {(resources.data || []).slice(0,2).map((r) => {
+              const attrs = r.attributes || {};
+              const img = attrs.cover_image?.data?.attributes?.url ? `${STRAPI_URL}${attrs.cover_image.data.attributes.url}` : '/images/resources_news.jpg';
+              return (
+                <div key={r.id} className={`update-card ${attrs.featured ? 'large' : 'small'}`}>
+                  <img src={img} alt={attrs.title} className={`update-card-img ${attrs.featured ? 'large-img' : 'small-img'}`} />
+                  <p className="update-date"><FiCalendar className="calendar-icon" /> {attrs.published_at ? new Date(attrs.published_at).toLocaleDateString() : ''}</p>
+                  <h3 className="update-title">{attrs.title}</h3>
+                  <p className="update-desc">{(attrs.body || '').slice(0, 160)}...</p>
+                  <a href={`/resources/${attrs.slug}`} className="update-link">Read More →</a>
+                </div>
+              )
+            })}
           </div>
         </div>
       </div>
@@ -203,3 +174,14 @@ const Resources = () => {
 };
 
 export default Resources;
+
+export async function getStaticProps() {
+  try {
+    const resources = await getResources();
+    const globalSetting = await getGlobalSettings();
+    return { props: { resources, globalSetting }, revalidate: 10 };
+  } catch (err) {
+    console.error('getStaticProps resources error:', err);
+    return { props: { resources: null, globalSetting: null }, revalidate: 10 };
+  }
+}

@@ -3,7 +3,7 @@ const fs = require('fs')
 const path = require('path')
 
 // Assumption: site root. Prefer NEXT_PUBLIC_SITE_URL in environment for flexibility.
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://sonaliwires.com'
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:1337'
 const pagesDir = path.join(__dirname, '..', 'pages')
 const publicDir = path.join(__dirname, '..', 'public')
 

@@ -1,7 +1,7 @@
 import Head from 'next/head'
 
 // Read site URL from env var when possible so this can adapt to prod/staging
-const SITE_URL = (typeof process !== 'undefined' && process.env.NEXT_PUBLIC_SITE_URL) || 'https://sonaliwires.com'
+const SITE_URL = (typeof process !== 'undefined' && process.env.NEXT_PUBLIC_SITE_URL) || 'http://localhost:1337'
 
 export default function SEO({
   title = 'Sonali Wires',

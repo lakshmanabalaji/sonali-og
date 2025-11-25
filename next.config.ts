@@ -7,6 +7,20 @@ const nextConfig: NextConfig = {
   productionBrowserSourceMaps: true,
   images: {
     unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+        port: '1337',
+        pathname: '/uploads/**',
+      },
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+        port: '1337',
+        pathname: '/api/**',
+      },
+    ],
   },
   async headers() {
     return [
@@ -39,6 +53,7 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  reactStrictMode: false,
 };
 
 export default nextConfig;

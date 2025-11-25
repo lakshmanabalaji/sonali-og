@@ -1,5 +1,7 @@
 import React from "react";
 import { useState, useMemo } from "react";
+import { getAboutContent, getGlobalSettings } from '../lib/cms';
+import { STRAPI_URL } from '../lib/strapi';
 import SEO from "../components/SEO";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import FaShieldAlt from '../components/icons/FaShieldAlt';
@@ -10,10 +12,11 @@ import FaHeart from '../components/icons/FaHeart';
 import FaTrophy from '../components/icons/FaTrophy';
 import { MILESTONES } from "../components/History/timeline_years.js";
 
-const About = () => {
+const About = ({ about, globalSetting }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const active = MILESTONES[activeIndex];
   const years = useMemo(() => MILESTONES.map(m => m.year), []);
+  const aboutAttrs = about?.data?.attributes || {};
 
   const goNext = () => setActiveIndex(i => (i + 1) % MILESTONES.length);
   const goPrev = () => setActiveIndex(i => (i - 1 + MILESTONES.length) % MILESTONES.length);
@@ -32,17 +35,14 @@ const About = () => {
             {/* Left section */}
             <div className="col-lg-8">
               <p className="breadcrumb">Home &gt; About Us</p>
-              <h2 className="about-title">About</h2>
+              <h2 className="about-title">{aboutAttrs.page_title || 'About'}</h2>
               
               <p className="about-heading">
-               <span className="span-h1">Sonali </span> Wires LLP
+               <span className="span-h1">{aboutAttrs.page_title ? aboutAttrs.page_title.split(' ')[0] : 'Sonali'}</span> {aboutAttrs.page_title ? aboutAttrs.page_title.split(' ').slice(1).join(' ') : 'Wires LLP'}
               </p>
 
               <h3 className="vision-title">Our Vision</h3>
-              <p className="vision-text">
-                To empower households, industries, and agriculture with safe,
-                innovative, and sustainable copper cabling solutions.
-              </p>
+              <div className="vision-text" dangerouslySetInnerHTML={{ __html: aboutAttrs.description || 'To empower households, industries, and agriculture with safe, innovative, and sustainable copper cabling solutions.' }} />
             </div>
 
             {/* Right section */}
@@ -525,3 +525,14 @@ const About = () => {
 };
 
 export default About;
+
+export async function getStaticProps() {
+  try {
+    const about = await getAboutContent();
+    const globalSetting = await getGlobalSettings();
+    return { props: { about, globalSetting }, revalidate: 10 };
+  } catch (err) {
+    console.error('getStaticProps about error:', err);
+    return { props: { about: null, globalSetting: null }, revalidate: 10 };
+  }
+}

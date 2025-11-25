@@ -10,9 +10,39 @@ import '../components/Hyperspeed.css'
 import '../components/liquideither.css'
 import Layout from '../components/Layout'
 import Head from 'next/head'
-import Script from 'next/script'
+import { useEffect } from 'react'
 
 function MyApp({ Component, pageProps }) {
+  useEffect(() => {
+    // Suppress HMR errors in Brave browser
+    // Brave has stricter security policies that can cause duplicate HMR handler warnings
+    const originalError = console.error
+    const originalWarn = console.warn
+    
+    console.error = (...args) => {
+      const message = args[0]?.toString?.() || ''
+      // Suppress only the duplicate HMR handler error
+      if (message.includes('A separate HMR handler was already registered')) {
+        return
+      }
+      originalError.apply(console, args)
+    }
+    
+    console.warn = (...args) => {
+      const message = args[0]?.toString?.() || ''
+      // Suppress HMR-related warnings
+      if (message.includes('HMR')) {
+        return
+      }
+      originalWarn.apply(console, args)
+    }
+    
+    return () => {
+      console.error = originalError
+      console.warn = originalWarn
+    }
+  }, [])
+
   return (
     <>
       <Head>
@@ -31,13 +61,7 @@ function MyApp({ Component, pageProps }) {
         {/* Font Awesome removed: switching to self-hosted fonts */}
       </Head>
 
-      {/* Bootstrap JS */}
-      <Script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-        strategy="afterInteractive"
-      />
-
-      <Layout>
+      <Layout globalSetting={pageProps.globalSetting}>
         <Component {...pageProps} />
       </Layout>
     </>

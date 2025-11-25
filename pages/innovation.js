@@ -1,5 +1,6 @@
 import React from 'react';
 import SEO from "../components/SEO";
+import withGlobalSettings from '../lib/withGlobalSettings';
 
 const Innovation = () => {
   return (
@@ -214,3 +215,5 @@ const Innovation = () => {
 };
 
 export default Innovation;
+
+export const getStaticProps = withGlobalSettings();

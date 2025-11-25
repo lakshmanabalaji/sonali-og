@@ -117,8 +117,8 @@
 /* ===== FIX: Dropdown Arrow Exact Alignment ===== */
 .navbar .dropdown-toggle::after {
   display: inline-block;
-  vertical-align: middle;  /* keeps caret aligned with text baseline */
-  margin-left: 80px;
+  margin-left: 90px !important; 
+  vertical-align: 0.255em;
   border-top: 0.35em solid; 
   border-right: 0.35em solid transparent;
   border-left: 0.35em solid transparent;
@@ -221,6 +221,11 @@
   color: #fff;
 }
 
+/* Search icon color */
+.navbar .btn-link i {
+  color: #fff;
+}
+
 /* =======================================
    🩵 CONTACT BUTTON
 ======================================= */
@@ -296,8 +301,20 @@
    📱 RESPONSIVE NAVBAR (MOBILE)
 ======================================= */
 @media (max-width: 992px) {
+  .navbar .dropdown-toggle::after {
+ 
+  margin-left: 0px !important; 
+  vertical-align: 0.255em;
+  /* border-top: 0.35em solid;  */
+  /* border-right: 0.35em solid transparent; */
+  border-left: 0.35em solid transparent;
+  border-bottom: 0;
+  position: relative;
+  top: 0; /* ✅ ensure it doesn't shift up */
+  transform: translateY(1px);
+  }
   .navbar {
-    background: rgba(22, 44, 71, 0.95) !important;
+    /* background: rgba(22, 44, 71, 0.95) !important; */
     position: relative;
   }
 
@@ -456,7 +473,7 @@
 
 .cert-desc {
   font-size: 20px;
-  width: 700px;
+  width: 500px;
   max-width: 800px;
   margin: 0 auto;
   line-height: 1.6;

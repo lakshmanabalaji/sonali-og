@@ -5,31 +5,17 @@ import Image from 'next/image'
 import FiMapPin from '../components/icons/FiMapPin';
 import BiBriefcase from '../components/icons/BiBriefcase';
 import { FaRegSmile } from 'react-icons/fa';
+import { getCareers, getGlobalSettings } from '../lib/cms';
+import { STRAPI_URL } from '../lib/strapi';
 
-const Careers = () => {
-  const jobOpenings = [
-    {
-      title: "Quality Testing Engineer",
-      type: "Fulltime",
-      location: "Chennai",
-      responsibilities:
-        "Ensure compliance with BIS, ISI & ISO standards. Work on developing safer, smarter, and sustainable copper solutions.",
-    },
-    {
-      title: "Production Supervisor",
-      type: "Fulltime",
-      location: "Chennai",
-      responsibilities:
-        "Manage workflows and ensure product quality. Work in world-class facilities with modern machinery and automated systems.",
-    },
-    {
-      title: "Regional Sales Manager",
-      type: "Fulltime",
-      location: "Chennai",
-      responsibilities:
-        "Drive sales performance across regions. Help us expand our nationwide presence and build long-term trust with customers.",
-    },
-  ];
+const Careers = ({ careers = { data: [] }, globalSetting }) => {
+  const careerData = (careers && careers.data) || [];
+  const jobOpenings = careerData.map(c => ({
+    title: c.attributes.job_title,
+    type: c.attributes.type,
+    location: c.attributes.location,
+    responsibilities: c.attributes.description,
+  }));
 
   const promises = [
     {
@@ -258,3 +244,15 @@ const Careers = () => {
 };
 
 export default Careers;
+
+export async function getStaticProps() {
+  try {
+    const careers = await getCareers();
+    const globalSetting = await getGlobalSettings();
+    // Ensure careers has a consistent shape for the page (avoid null)
+    return { props: { careers: careers || { data: [] }, globalSetting: globalSetting || null }, revalidate: 10 };
+  } catch (err) {
+    console.error('getStaticProps careers error:', err);
+    return { props: { careers: { data: [] }, globalSetting: null }, revalidate: 10 };
+  }
+}
